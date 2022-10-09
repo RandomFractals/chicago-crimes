@@ -36,7 +36,7 @@ Crimes `CSV` data imported into [Tad Viewer](https://dbeaver.io/):
 
 ### With Polars
 
-Quick Arrests data query with [Polars]()[https://www.pola.rs/]:
+Quick Arrests data query with [Polars]([https://www.pola.rs/)
 
 ![Chicago Crimes with Polars](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-polars.png?raw=true
  "Chicago Crimes with Polars")
