@@ -18,5 +18,16 @@ Raw dataset view in VSCode:
 ![Chicago Crimes 2001 to Present Data ...](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-data.png?raw=true
  "Chicago Crimes 2001 to Present Data ...")
 
+## Prior Works
 
+Links to our prior works on [Chicago Crimes EDA](https://twitter.com/search?q=(%23ChicagoCrimes)%20(from%3ATarasNovak)&src=typed_query) circa 2017/2018:
 
+🔗 [Chicago Crimes EDA Summary on Linkedin](https://www.linkedin.com/pulse/chicago-crimes-2017-taras-novak/)
+
+📚 [Chicago Crimes EDA 2017 Jupyter Notebooks](https://github.com/RandomFractals/ChicagoCrimes/tree/master/notebooks)
+
+📚 [Observable JS Chicago Crimes Notebook Collection 2018](https://observablehq.com/@randomfractals/chicagocrimes)
+
+📚 [Chicago Homocides Observable JS Notebook Collection 2018](https://observablehq.com/@randomfractals/leaflet-pixi-overlay?collection=@randomfractals/chicago-homicides)
+
+🐦 [Chicago Crimes EDA, Data Preview and Tabular Data Viewer tweets](https://twitter.com/search?q=(%23ChicagoCrimes)%20(from%3ATarasNovak)&src=typed_query)
