@@ -11,17 +11,28 @@ Data from: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/i
 ![Chicago Crimes 2001 to Present Info ...](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-info.png?raw=true
  "Chicago Crimes 2001 to Present Info ...")
 
-## Raw Data View
+## Raw Data Views
 
-Raw dataset view in VSCode:
+### In VSCode
+
+Raw dataset view in VSCode with [Tabular Data Viewer](https://github.com/RandomFractals/tabular-data-viewer) and [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv):
 
 ![Chicago Crimes 2001 to Present Data ...](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-data.png?raw=true
  "Chicago Crimes 2001 to Present Data ...")
 
-Crimes `CSV` data imported in [DBeaver](https://dbeaver.io/):
+### In DBeaver
+
+Crimes `CSV` data imported in [DBeaver](https://dbeaver.io/) for comparison:
 
 ![Crimes Data in DBeaver](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-dbeaver.png?raw=true
  "Crimes Data in DBeaver")
+
+### In Tad Viewer
+
+Crimes `CSV` data imported into [Tad Viewer](https://dbeaver.io/):
+
+![Crimes Data in Tad Viewer](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-in-tad.png?raw=true
+ "Crimes Data in Tad Viewer")
 
 ## Prior Works
 
