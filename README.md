@@ -34,6 +34,13 @@ Crimes `CSV` data imported into [Tad Viewer](https://dbeaver.io/):
 ![Crimes Data in Tad Viewer](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-in-tad.png?raw=true
  "Crimes Data in Tad Viewer")
 
+### With Polars
+
+Quick Arrests data query with [Polars]()[https://www.pola.rs/]:
+
+![Chicago Crimes with Polars](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-polars.png?raw=true
+ "Chicago Crimes with Polars")
+
 ## Prior Works
 
 Links to our prior works on [Chicago Crimes EDA](https://twitter.com/search?q=(%23ChicagoCrimes)%20(from%3ATarasNovak)&src=typed_query) circa 2017/2018:
