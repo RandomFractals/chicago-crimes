@@ -1,0 +1,46 @@
+{
+	"folders": {},
+	"connections": {
+		"csvjdbc-183bd3d2ca6-2882707037c9cc10": {
+			"provider": "generic",
+			"driver": "csvjdbc",
+			"name": "data",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "E:\\projects\\Chicago\\chicago-crimes\\data",
+				"url": "jdbc:relique:csv:E:\\projects\\Chicago\\chicago-crimes\\data",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		},
+		"duckdb_jdbc-183bd6bd8ff-7693bc29875bc09d": {
+			"provider": "generic",
+			"driver": "duckdb_jdbc",
+			"name": "memory",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": ":memory:",
+				"url": "jdbc:duckdb::memory:",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
