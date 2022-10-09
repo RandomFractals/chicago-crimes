@@ -18,6 +18,11 @@ Raw dataset view in VSCode:
 ![Chicago Crimes 2001 to Present Data ...](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-data.png?raw=true
  "Chicago Crimes 2001 to Present Data ...")
 
+Crimes `CSV` data imported in [DBeaver](https://dbeaver.io/):
+
+![Crimes Data in DBeaver](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-dbeaver.png?raw=true
+ "Crimes Data in DBeaver")
+
 ## Prior Works
 
 Links to our prior works on [Chicago Crimes EDA](https://twitter.com/search?q=(%23ChicagoCrimes)%20(from%3ATarasNovak)&src=typed_query) circa 2017/2018:
