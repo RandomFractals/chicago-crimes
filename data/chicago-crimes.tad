@@ -1,0 +1,80 @@
+{
+  "tadFileFormatVersion": 2,
+  "contents": {
+    "dsPath": {
+      "sourceId": {
+        "providerName": "localfs",
+        "resourceId": "E:\\projects\\Chicago\\chicago-crimes\\data\\Crimes_-_2001_to_Present.csv"
+      },
+      "path": [
+        "."
+      ]
+    },
+    "viewParams": {
+      "showRoot": false,
+      "displayColumns": [
+        "ID",
+        "Case Number",
+        "Date",
+        "Block",
+        "IUCR",
+        "Primary Type",
+        "Description",
+        "Location Description",
+        "Arrest",
+        "Domestic",
+        "Beat",
+        "District",
+        "Ward",
+        "Community Area",
+        "FBI Code",
+        "X Coordinate",
+        "Y Coordinate",
+        "Year",
+        "Updated On",
+        "Latitude",
+        "Longitude",
+        "Location",
+        "Rec"
+      ],
+      "vpivots": [],
+      "pivotLeafColumn": null,
+      "sortKey": [],
+      "openPaths": {
+        "_rep": {}
+      },
+      "aggMap": {},
+      "defaultFormats": {
+        "string": {
+          "type": "TextFormatOptions",
+          "urlsAsHyperlinks": true
+        },
+        "integer": {
+          "type": "NumFormatOptions",
+          "commas": true,
+          "decimalPlaces": 0,
+          "exponential": false
+        },
+        "real": {
+          "type": "NumFormatOptions",
+          "commas": true,
+          "decimalPlaces": 2,
+          "exponential": false
+        },
+        "boolean": {
+          "type": "NumFormatOptions",
+          "commas": true,
+          "decimalPlaces": 0,
+          "exponential": false
+        }
+      },
+      "columnFormats": {},
+      "showHiddenCols": false,
+      "filterExp": {
+        "expType": "FilterExp",
+        "op": "AND",
+        "opArgs": []
+      }
+    }
+  }
+}
