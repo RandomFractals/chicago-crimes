@@ -29,7 +29,7 @@ Crimes `CSV` data imported in [DBeaver](https://dbeaver.io/) for comparison:
 
 ### In Tad Viewer
 
-Crimes `CSV` data imported into [Tad Viewer](https://dbeaver.io/):
+Crimes `CSV` data imported into [Tad Viewer](https://www.tadviewer.com/):
 
 ![Crimes Data in Tad Viewer](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-in-tad.png?raw=true
  "Crimes Data in Tad Viewer")
