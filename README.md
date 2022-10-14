@@ -55,6 +55,13 @@ Loading Chicago crimes `CSV` data with [DBI](https://dbi.r-dbi.org/) R library a
 ![Chicago Crimes with DuckDB in R](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-duckdb-in-r-studio.png?raw=true
  "Chicago Crimes with DuckDB in R")
 
+### With Julia REPL
+
+Reading Chicago crimes `CSV` data with [DuckDB Julia Package](https://juliahub.com/ui/Packages/DuckDB/89qwz/0.5.1) in [VSCode Julia lang](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia) and running it in [Julia REPL](https://docs.julialang.org/en/v1/stdlib/REPL/):
+
+![Chicago Crimes CSV to DuckDB in Julia REPL](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-duckdb-julia-repl.png?raw=true
+ "Chicago Crimes CSV to DuckDB in Julia REPL")
+
 ...
 
 More In & With sections of viewing Chicago crimes data with different open source data tools in the wild to come next weekend
