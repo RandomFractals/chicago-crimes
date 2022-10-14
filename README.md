@@ -62,6 +62,13 @@ Reading Chicago crimes `CSV` data with [DuckDB Julia Package](https://juliahub.c
 ![Chicago Crimes CSV to DuckDB in Julia REPL](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-duckdb-julia-repl.png?raw=true
  "Chicago Crimes CSV to DuckDB in Julia REPL")
 
+### In Emacs
+
+Reading Chicago crimes `CSV` data with [SBCL](https://sbcl.org/) + [cl-duckdb](https://github.com/ak-coram/cl-duckdb) in [Emacs](https://www.gnu.org/software/emacs/) + [SLY](https://github.com/joaotavora/sly):
+
+![Chicago Crimes CSV to DuckDB in Emacs](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-in-emacs.png?raw=true
+ "Chicago Crimes CSV to DuckDB in Emacs")
+
 ...
 
 More In & With sections of viewing Chicago crimes data with different open source data tools in the wild to come next weekend
