@@ -57,10 +57,17 @@ Loading Chicago crimes `CSV` data with [DBI](https://dbi.r-dbi.org/) R library a
 
 ### With Julia REPL
 
-Reading Chicago crimes `CSV` data with [DuckDB Julia Package](https://juliahub.com/ui/Packages/DuckDB/89qwz/0.5.1) in [VSCode Julia lang](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia) and running it in [Julia REPL](https://docs.julialang.org/en/v1/stdlib/REPL/):
+Reading Chicago crimes `CSV` data with [DuckDB Julia Package](https://juliahub.com/ui/Packages/DuckDB/89qwz/0.5.1) in [VSCode Julia lang](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia), and running it in [Julia REPL](https://docs.julialang.org/en/v1/stdlib/REPL/):
 
 ![Chicago Crimes CSV to DuckDB in Julia REPL](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-duckdb-julia-repl.png?raw=true
  "Chicago Crimes CSV to DuckDB in Julia REPL")
+
+### With Julia CSVFiles and DataFrame
+
+Loading Chicago crimes `CSV` data via Julia [CSVFiles](https://github.com/queryverse/CSVFiles.jl) into native Julia [DataFrames](https://dataframes.juliadata.org/stable/):
+
+![Chicago Crimes CSV in Julia DataFrame](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-csv-julia-dataframe.png?raw=true
+ "Chicago Crimes CSV in Julia DataFrame")
 
 ### In Emacs
 
