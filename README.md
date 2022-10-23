@@ -41,6 +41,13 @@ Quick Arrests data query with [Polars](https://www.pola.rs/):
 ![Chicago Crimes with Polars](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-polars.png?raw=true
  "Chicago Crimes with Polars")
 
+### With PyArrow
+
+Loading Chicago crimes raw `CSV` data with [PyArrow](https://arrow.apache.org/docs/python/csv.html):
+
+![Chicago Crimes with PyArrow](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-pyarrow.png?raw=true
+ "Chicago Crimes with PyArrow")
+
 ### With DuckDB
 
 Loading Chicago crimes `CSV` data into a blank `in-memory` [DuckDB](https://duckdb.org/docs/data/csv) instance:
