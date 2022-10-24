@@ -62,6 +62,13 @@ Loading Chicago crimes `CSV` data into a blank `in-memory` [DuckDB](https://duck
 ![Chicago Crimes with DuckDB](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-duckdb.png?raw=true
  "Chicago Crimes with DuckDB")
 
+### With DuckDB Parquet
+
+Loading Chicago crimes `.parquet` data via [DuckDB `read_parquet()`](https://duckdb.org/docs/data/parquet):
+
+![Chicago Crimes with DuckDB Parquet](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-duckdb-parquet.png?raw=true
+ "Chicago Crimes with DuckDB Parquet")
+
 ### With DuckDB SQLMagic
 
 Loading Chicago crimes `CSV` data into a blank `in-memory` [DuckDB](https://duckdb.org/docs/guides/python/jupyter) with `ipython-sql` [SQLMagic](https://github.com/catherinedevlin/ipython-sql) in [VSCode Jupyter Notebook](https://code.visualstudio.com/docs/datascience/jupyter-notebooks):
