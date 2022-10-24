@@ -43,10 +43,17 @@ Quick Arrests data query with [Polars](https://www.pola.rs/):
 
 ### With PyArrow
 
-Loading Chicago crimes raw `CSV` data with [PyArrow](https://arrow.apache.org/docs/python/csv.html):
+Loading Chicago crimes raw `CSV` data with [PyArrow CSV](https://arrow.apache.org/docs/python/csv.html):
 
 ![Chicago Crimes with PyArrow](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-pyarrow.png?raw=true
  "Chicago Crimes with PyArrow")
+
+### With PyArrow Feather and Parquet
+
+Writing and reading Chicago crimes [PyArrow Table](https://arrow.apache.org/docs/python/index.html) data in [Feather](https://arrow.apache.org/docs/python/feather.html) and [Parquet](https://arrow.apache.org/docs/python/parquet.html) data file formats:
+
+![Chicago Crimes with PyArrow Feather and Parquet](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-feather-and-parquet.png?raw=true
+ "Chicago Crimes with PyArrow Feather and Parquet")
 
 ### With DuckDB
 
