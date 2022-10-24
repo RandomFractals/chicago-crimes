@@ -36,10 +36,17 @@ Crimes `CSV` data imported into [Tad Viewer](https://www.tadviewer.com/):
 
 ### With Polars
 
-Quick Arrests data query with [Polars](https://www.pola.rs/):
+Quick Chicago crimes `CSV` data scan and Arrests query with [Polars](https://www.pola.rs/) in one cell code block :
 
 ![Chicago Crimes with Polars](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-polars.png?raw=true
  "Chicago Crimes with Polars")
+
+### With Polars Parquet
+
+Loading Chicago crimes `.parquet` data file with [`polars.read_parquet()`](https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.read_parquet.html):
+
+![Chicago Crimes with Polars Parquet](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-polars-parquet.png?raw=true
+ "Chicago Crimes with Polars Parquet")
 
 ### With PyArrow
 
