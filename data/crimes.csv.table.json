@@ -1,0 +1,40 @@
+{
+  "views": {
+    "Datagrid": {
+      "plugin": "Datagrid",
+      "plugin_config": {},
+      "settings": false,
+      "row_pivots": [],
+      "column_pivots": [],
+      "columns": [
+        "ID",
+        "Case Number",
+        "Date",
+        "Block",
+        "IUCR",
+        "Primary Type",
+        "Description",
+        "Location Description",
+        "Arrest",
+        "Domestic",
+        "Beat",
+        "District",
+        "Ward",
+        "Community Area",
+        "FBI Code",
+        "X Coordinate",
+        "Y Coordinate",
+        "Year",
+        "Updated On",
+        "Latitude",
+        "Longitude",
+        "Location"
+      ],
+      "filter": [],
+      "sort": [],
+      "expressions": [],
+      "aggregates": {}
+    }
+  },
+  "view": "Datagrid"
+}

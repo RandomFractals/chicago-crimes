@@ -1,0 +1,117 @@
+{
+  "fields": [
+    {
+      "name": "ID",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "Case Number",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Date",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Block",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "IUCR",
+      "type": "number",
+      "format": "default"
+    },
+    {
+      "name": "Primary Type",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Description",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Location Description",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Arrest",
+      "type": "boolean",
+      "format": "default"
+    },
+    {
+      "name": "Domestic",
+      "type": "boolean",
+      "format": "default"
+    },
+    {
+      "name": "Beat",
+      "type": "any",
+      "format": "default"
+    },
+    {
+      "name": "District",
+      "type": "number",
+      "format": "default"
+    },
+    {
+      "name": "Ward",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "Community Area",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "FBI Code",
+      "type": "any",
+      "format": "default"
+    },
+    {
+      "name": "X Coordinate",
+      "type": "any",
+      "format": "default"
+    },
+    {
+      "name": "Y Coordinate",
+      "type": "any",
+      "format": "default"
+    },
+    {
+      "name": "Year",
+      "type": "year",
+      "format": "default"
+    },
+    {
+      "name": "Updated On",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Latitude",
+      "type": "any",
+      "format": "default"
+    },
+    {
+      "name": "Longitude",
+      "type": "any",
+      "format": "default"
+    },
+    {
+      "name": "Location",
+      "type": "string",
+      "format": "default"
+    }
+  ],
+  "missingValues": [
+    ""
+  ]
+}
