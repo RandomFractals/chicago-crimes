@@ -21,3 +21,11 @@ query: crimes -> {
   aggregate:
     domestic_crime_report_count is count()
 }
+
+-- Crime Reports by Description
+query: crimes -> {
+  group_by: Description
+  aggregate:
+    Reports is count()
+}
+
