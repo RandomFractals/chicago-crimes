@@ -22,7 +22,7 @@
     },
     {
       "name": "IUCR",
-      "type": "number",
+      "type": "any",
       "format": "default"
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "name": "Beat",
-      "type": "any",
+      "type": "year",
       "format": "default"
     },
     {
@@ -77,12 +77,12 @@
     },
     {
       "name": "X Coordinate",
-      "type": "any",
+      "type": "integer",
       "format": "default"
     },
     {
       "name": "Y Coordinate",
-      "type": "any",
+      "type": "integer",
       "format": "default"
     },
     {
@@ -97,12 +97,12 @@
     },
     {
       "name": "Latitude",
-      "type": "any",
+      "type": "number",
       "format": "default"
     },
     {
       "name": "Longitude",
-      "type": "any",
+      "type": "number",
       "format": "default"
     },
     {
