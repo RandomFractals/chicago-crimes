@@ -49,3 +49,36 @@ query: crimes -> {
   aggregate:
     Reports is count()
 }
+
+-- Crime Reports by Community Area
+-- Chicago community areas:
+-- https://en.wikipedia.org/wiki/Community_areas_in_Chicago
+query: crimes -> {
+  group_by: `Community Area`
+  aggregate:
+    Reports is count()
+}
+
+-- Chicago Districts and Beats:
+-- https://news.wttw.com/sites/default/files/Map%20of%20Chicago%20Police%20Districts%20and%20Beats.pdf
+
+-- Crime Reports by District
+query: crimes -> {
+  group_by: District
+  aggregate:
+    Reports is count()
+}
+
+-- Crime Reports by Ward
+query: crimes -> {
+  group_by: Ward
+  aggregate:
+    Reports is count()
+}
+
+-- Crime Reports by Beat
+query: crimes -> {
+  group_by: Beat
+  aggregate:
+    Reports is count()
+}
