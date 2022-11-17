@@ -1,0 +1,23 @@
+source: crimes is table('duckdb:../data/crimes-2022.parquet') {
+  primary_key: ID
+}
+
+-- Total Crime Reports
+query: crimes -> {
+  aggregate:
+    crime_report_count is count()
+}
+
+-- Arrests
+query: crimes -> {
+  where: Arrest = true
+  aggregate:
+    arrest_count is count()
+}
+
+-- Domestic
+query: crimes -> {
+  where: Domestic = true
+  aggregate:
+    domestic_crime_report_count is count()
+}
