@@ -43,3 +43,9 @@ query: crimes -> {
     Reports is count()
 }
 
+-- Crime Reports by Location Description
+query: crimes -> {
+  group_by: `Location Description`
+  aggregate:
+    Reports is count()
+}
