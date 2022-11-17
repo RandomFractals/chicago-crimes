@@ -36,3 +36,10 @@ query: crimes -> {
     Reports is count()
 }
 
+-- Crime Reports by Primary Type and Description
+query: crimes -> {
+  group_by: `Primary Type`, Description
+  aggregate:
+    Reports is count()
+}
+
