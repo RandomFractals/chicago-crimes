@@ -83,6 +83,13 @@ Loading Chicago crimes `CSV` data into a blank `in-memory` [DuckDB](https://duck
 ![Chicago Crimes with DuckDB SQLMagic](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-duckdb-sqlmagic.png?raw=true
  "Chicago Crimes with DuckDB SQLMagic")
 
+### With Malloy Data
+
+Loading Chicago crimes 2022 `parquet` data with [Malloy Data](https://looker-open-source.github.io/malloy/documentation/language/basic.html) tools via [DuckDB](https://looker-open-source.github.io/malloy/documentation/connection_instructions.html#duckdb) parquet data table source, with queries, data schema, Malloy queries outline, data preview, and query results displayed in [VSCode Malloy](https://marketplace.visualstudio.com/items?itemName=malloydata.malloy-vscode) extension query editor and views:
+
+![Chicago Crimes with Malloy](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-duckdb-malloy-2022.png?raw=true
+ "Chicago Crimes with Malloy")
+
 ### In R Studio
 
 Loading Chicago crimes `CSV` data with [DBI](https://dbi.r-dbi.org/) R library and [DuckDB R API](https://duckdb.org/docs/api/r) in [R Studio](https://www.rstudio.com/):
