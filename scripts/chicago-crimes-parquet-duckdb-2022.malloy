@@ -3,48 +3,48 @@ source: crimes is table('duckdb:../data/crimes-2022.parquet') {
 }
 
 -- Total Crime Reports
-query: crimes -> {
+query: crime_reports is crimes -> {
   aggregate:
-    crime_report_count is count()
+    crime_reports is count()
 }
 
 -- Arrests
-query: crimes -> {
+query: arrests is crimes -> {
   where: Arrest = true
   aggregate:
-    arrest_count is count()
+    arrests is count()
 }
 
 -- Domestic
-query: crimes -> {
+query: domestic_crime_reports is crimes -> {
   where: Domestic = true
   aggregate:
-    domestic_crime_report_count is count()
+    domestic_crime_reports is count()
 }
 
 -- Crime Reports by Primary Type
-query: crimes -> {
+query: crimes_by_primary_type is crimes -> {
   group_by: `Primary Type`
   aggregate:
     Reports is count()
 }
 
 -- Crime Reports by Description
-query: crimes -> {
+query: crimes_by_description is crimes -> {
   group_by: Description
   aggregate:
     Reports is count()
 }
 
 -- Crime Reports by Primary Type and Description
-query: crimes -> {
+query: crimes_by_primary_type_and_description is crimes -> {
   group_by: `Primary Type`, Description
   aggregate:
     Reports is count()
 }
 
 -- Crime Reports by Location Description
-query: crimes -> {
+query: crimes_by_location_description is crimes -> {
   group_by: `Location Description`
   aggregate:
     Reports is count()
@@ -53,7 +53,7 @@ query: crimes -> {
 -- Crime Reports by Community Area
 -- Chicago community areas:
 -- https://en.wikipedia.org/wiki/Community_areas_in_Chicago
-query: crimes -> {
+query: crimes_by_community_area is crimes -> {
   group_by: `Community Area`
   aggregate:
     Reports is count()
@@ -63,21 +63,21 @@ query: crimes -> {
 -- https://news.wttw.com/sites/default/files/Map%20of%20Chicago%20Police%20Districts%20and%20Beats.pdf
 
 -- Crime Reports by District
-query: crimes -> {
+query: crimes_by_district is crimes -> {
   group_by: District
   aggregate:
     Reports is count()
 }
 
 -- Crime Reports by Ward
-query: crimes -> {
+query: crimes_by_ward is crimes -> {
   group_by: Ward
   aggregate:
     Reports is count()
 }
 
 -- Crime Reports by Beat
-query: crimes -> {
+query: crimes_by_beat is crimes -> {
   group_by: Beat
   aggregate:
     Reports is count()
