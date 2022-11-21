@@ -1,0 +1,16 @@
+source: crimes is table('duckdb:../data/crimes-2022.parquet') {
+  primary_key: ID
+}
+
+-- Crime Reports by Primary Type
+query: crimes_by_primary_type_bar_chart is crimes -> {
+  group_by: `Primary Type`
+  aggregate: Reports is count()
+}
+
+-- Crime Reports by Description
+query: crimes_by_description_bar_chart is crimes -> {
+  group_by: Description
+  aggregate: Reports is count()
+  limit: 20
+}
