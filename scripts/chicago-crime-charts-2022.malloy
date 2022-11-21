@@ -19,8 +19,9 @@ query: crimes_by_description_bar_chart is crimes -> {
 query: crimes_by_primary_type_and_description is crimes -> {
   group_by: `Primary Type`
   aggregate: Reports is count()
-  nest: crimes_by_description is {
+  nest: crimes_by_description_bar_chart is {
     group_by: Description,
     aggregate: Reports is count()
+    limit: 10
   }
 }
