@@ -44,6 +44,16 @@ query: crimes_by_primary_type_and_description is crimes -> {
     Reports is count()
 }
 
+-- Crime Reports by Primary Type with nested Description
+query: crimes_by_primary_type_and_description is crimes -> {
+  group_by: `Primary Type`
+  aggregate: Reports is count()
+  nest: crimes_by_description is {
+    group_by: Description,
+    aggregate: Reports is count()
+  }
+}
+
 -- Crime Reports by Location Description
 query: crimes_by_location_description is crimes -> {
   group_by: `Location Description`
