@@ -14,3 +14,13 @@ query: crimes_by_description_bar_chart is crimes -> {
   aggregate: Reports is count()
   limit: 20
 }
+
+-- Crime Reports by Primary Type with nested Description
+query: crimes_by_primary_type_and_description is crimes -> {
+  group_by: `Primary Type`
+  aggregate: Reports is count()
+  nest: crimes_by_description is {
+    group_by: Description,
+    aggregate: Reports is count()
+  }
+}
