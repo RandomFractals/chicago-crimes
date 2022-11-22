@@ -1,6 +1,4 @@
-source: crimes is table('duckdb:../data/crimes-2022.parquet') {
-  primary_key: ID
-}
+import "./chicago-crimes-duckdb-2022.malloy"
 
 -- Crime Reports by Primary Type
 query: crimes_by_primary_type_bar_chart is crimes -> {
@@ -11,17 +9,17 @@ query: crimes_by_primary_type_bar_chart is crimes -> {
 -- Crime Reports by Description
 query: crimes_by_description_bar_chart is crimes -> {
   group_by: Description
-  aggregate: Reports is count()
+  aggregate: Reports
   limit: 20
 }
 
 -- Crime Reports by Primary Type with nested Description
 query: crimes_by_primary_type_and_description is crimes -> {
   group_by: `Primary Type`
-  aggregate: Reports is count()
+  aggregate: Reports
   nest: crimes_by_description_bar_chart is {
     group_by: Description,
-    aggregate: Reports is count()
+    aggregate: Reports
     limit: 10
   }
 }
@@ -29,6 +27,6 @@ query: crimes_by_primary_type_and_description is crimes -> {
 -- Crime Reports by Location Description
 query: crimes_by_location_description_bar_chart is crimes -> {
   group_by: `Location Description`
-  aggregate: Reports is count()
+  aggregate: Reports
   limit: 20
 }
