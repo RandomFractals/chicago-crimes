@@ -18,19 +18,12 @@ source: crimes is
     }
   }
 
--- Total Crime Reports
-query: crime_reports is crimes -> {
-  aggregate: Reports
-}
-
--- Arrests
-query: arrests is crimes -> {
-  aggregate: Arrests
-}
-
--- Domestic
-query: domestic_crime_reports is crimes -> {
-  aggregate: Domestic_Reports
+-- Crimes Report Counts Summary
+query: crime_counts_dashboard is crimes -> {
+  nest:
+    Reports
+    Domestic_Reports
+    Arrests
 }
 
 -- Crime Reports by Primary Type and Description
