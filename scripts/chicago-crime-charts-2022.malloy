@@ -1,5 +1,13 @@
 import "./chicago-crimes-duckdb-2022.malloy"
 
+-- Crimes Report Dashboard
+query: crimes_dashboard is crimes -> {
+  nest:
+    Reports
+    Domestic_Reports
+    Arrests
+}
+
 -- Crime Reports by Primary Type
 query: crimes_by_primary_type_bar_chart is
   crimes -> crimes_by_primary_type
