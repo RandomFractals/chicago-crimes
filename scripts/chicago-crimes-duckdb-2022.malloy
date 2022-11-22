@@ -16,6 +16,10 @@ source: crimes is
       group_by: Description,
       aggregate: Reports
     }
+    query: crimes_by_location_description is {
+      group_by: `Location Description`
+      aggregate: Reports
+    }
   }
 
 -- Crimes Report Counts Summary
@@ -37,12 +41,6 @@ query: crimes_by_primary_type_with_description is
   crimes -> crimes_by_primary_type + {
     nest: crimes_by_description
   }
-
--- Crime Reports by Location Description
-query: crimes_by_location_description is crimes -> {
-  group_by: `Location Description`
-  aggregate: Reports
-}
 
 -- Crime Reports by Community Area
 -- Chicago community areas:
