@@ -8,6 +8,14 @@ source: crimes is
     measure: Domestic_Reports is Reports {
       where: Domestic = true
     }
+    query: crimes_by_primary_type is {
+      group_by: `Primary Type`
+      aggregate: Reports
+    }
+    query: crimes_by_description is {
+      group_by: Description,
+      aggregate: Reports
+    }
   }
 
 -- Total Crime Reports
@@ -25,18 +33,6 @@ query: domestic_crime_reports is crimes -> {
   aggregate: Domestic_Reports
 }
 
--- Crime Reports by Primary Type
-query: crimes_by_primary_type is crimes -> {
-  group_by: `Primary Type`
-  aggregate: Reports
-}
-
--- Crime Reports by Description
-query: crimes_by_description is crimes -> {
-  group_by: Description
-  aggregate: Reports
-}
-
 -- Crime Reports by Primary Type and Description
 query: crimes_by_primary_type_and_description is crimes -> {
   group_by: `Primary Type`, Description
@@ -44,14 +40,10 @@ query: crimes_by_primary_type_and_description is crimes -> {
 }
 
 -- Crime Reports by Primary Type with nested Description
-query: crimes_by_primary_type_and_description is crimes -> {
-  group_by: `Primary Type`
-  aggregate: Reports is count()
-  nest: crimes_by_description is {
-    group_by: Description,
-    aggregate: Reports is count()
+query: crimes_by_primary_type_with_description is
+  crimes -> crimes_by_primary_type + {
+    nest: crimes_by_description
   }
-}
 
 -- Crime Reports by Location Description
 query: crimes_by_location_description is crimes -> {
