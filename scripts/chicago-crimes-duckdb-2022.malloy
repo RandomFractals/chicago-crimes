@@ -5,43 +5,37 @@ source: crimes is
 
 -- Total Crime Reports
 query: crime_reports is crimes -> {
-  aggregate:
-    crime_reports is count()
+  aggregate: crime_reports is count()
 }
 
 -- Arrests
 query: arrests is crimes -> {
   where: Arrest = true
-  aggregate:
-    arrests is count()
+  aggregate: arrests is count()
 }
 
 -- Domestic
 query: domestic_crime_reports is crimes -> {
   where: Domestic = true
-  aggregate:
-    domestic_crime_reports is count()
+  aggregate: domestic_crime_reports is count()
 }
 
 -- Crime Reports by Primary Type
 query: crimes_by_primary_type is crimes -> {
   group_by: `Primary Type`
-  aggregate:
-    Reports is count()
+  aggregate: Reports is count()
 }
 
 -- Crime Reports by Description
 query: crimes_by_description is crimes -> {
   group_by: Description
-  aggregate:
-    Reports is count()
+  aggregate: Reports is count()
 }
 
 -- Crime Reports by Primary Type and Description
 query: crimes_by_primary_type_and_description is crimes -> {
   group_by: `Primary Type`, Description
-  aggregate:
-    Reports is count()
+  aggregate: Reports is count()
 }
 
 -- Crime Reports by Primary Type with nested Description
@@ -57,8 +51,7 @@ query: crimes_by_primary_type_and_description is crimes -> {
 -- Crime Reports by Location Description
 query: crimes_by_location_description is crimes -> {
   group_by: `Location Description`
-  aggregate:
-    Reports is count()
+  aggregate: Reports is count()
 }
 
 -- Crime Reports by Community Area
@@ -66,8 +59,7 @@ query: crimes_by_location_description is crimes -> {
 -- https://en.wikipedia.org/wiki/Community_areas_in_Chicago
 query: crimes_by_community_area is crimes -> {
   group_by: `Community Area`
-  aggregate:
-    Reports is count()
+  aggregate: Reports is count()
 }
 
 -- Chicago Districts and Beats:
@@ -76,20 +68,17 @@ query: crimes_by_community_area is crimes -> {
 -- Crime Reports by District
 query: crimes_by_district is crimes -> {
   group_by: District
-  aggregate:
-    Reports is count()
+  aggregate: Reports is count()
 }
 
 -- Crime Reports by Ward
 query: crimes_by_ward is crimes -> {
   group_by: Ward
-  aggregate:
-    Reports is count()
+  aggregate: Reports is count()
 }
 
 -- Crime Reports by Beat
 query: crimes_by_beat is crimes -> {
   group_by: Beat
-  aggregate:
-    Reports is count()
+  aggregate: Reports is count()
 }
