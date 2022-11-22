@@ -25,8 +25,4 @@ query: crimes_by_primary_type_summary is
 
 -- Crime Reports by Location Description
 query: crimes_by_location_description_bar_chart is
-  crimes -> {
-    group_by: `Location Description`
-    aggregate: Reports
-    limit: 20
-  }
+  crimes -> crimes_by_location_description { limit: 20 }
