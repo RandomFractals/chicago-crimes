@@ -90,6 +90,13 @@ Loading Chicago crimes 2022 `parquet` data with [Malloy Data](https://looker-ope
 ![Chicago Crimes with Malloy](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-duckdb-malloy-2022.png?raw=true
  "Chicago Crimes with Malloy")
 
+### With Malloy Charts
+
+Displaying Chicago crimes 2022 `parquet` data with [Malloy Charts](https://looker-open-source.github.io/malloy/documentation/visualizations/dashboards.html) using [Malloy Import](https://looker-open-source.github.io/malloy/documentation/language/imports.html) with table source, measures, and data quiries defined above:
+
+![Chicago Crimes Malloy Charts Summary](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-by-type-malloy-summary.png?raw=true
+ "Chicago Crimes Malloy Charts Summary")
+
 ### In R Studio
 
 Loading Chicago crimes `CSV` data with [DBI](https://dbi.r-dbi.org/) R library and [DuckDB R API](https://duckdb.org/docs/api/r) in [R Studio](https://www.rstudio.com/):
