@@ -1,6 +1,6 @@
 # chicago-crimes
 
-Exploring Chicago crimes dataset with DuckDB, Malloy and new Panel/PyScript data and dashboard tools ...
+Exploring Chicago crimes dataset with DuckDB, [Malloy Data](https://marketplace.visualstudio.com/items?itemName=malloydata.malloy-vscode), and soon new Panel/PyScript data and dashboard tools ...
 
 ## Data Source
 
@@ -92,7 +92,7 @@ Loading Chicago crimes 2022 `parquet` data with [Malloy Data](https://looker-ope
 
 ### With Malloy Charts
 
-Displaying Chicago crimes 2022 `parquet` data with [Malloy Charts](https://looker-open-source.github.io/malloy/documentation/visualizations/dashboards.html) using [Malloy Import](https://looker-open-source.github.io/malloy/documentation/language/imports.html) with table source, measures, and data quiries defined above:
+Displaying Chicago crimes 2022 `parquet` data with [Malloy Charts](https://looker-open-source.github.io/malloy/documentation/visualizations/dashboards.html) using [Malloy Import](https://looker-open-source.github.io/malloy/documentation/language/imports.html) with table source, measures, and data queries defined above:
 
 ![Chicago Crimes Malloy Charts Summary](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-by-type-malloy-summary.png?raw=true
  "Chicago Crimes Malloy Charts Summary")
