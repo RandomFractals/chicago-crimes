@@ -9,7 +9,7 @@ query: crimes_by_description_bar_chart is
   crimes -> crimes_by_description { limit: 20 }
 
 -- Crime Reports by Primary Type with nested Description
-query: crimes_by_primary_summary is
+query: crimes_by_primary_type_summary is
   crimes -> crimes_by_primary_type + {
     nest: crimes_by_description_bar_chart is
       crimes_by_description { limit: 10 }
