@@ -29,7 +29,4 @@ query: crimes_by_location_description_bar_chart is
 
 -- Crime Reports by Month
 query: crimes_by_month_line_chart is
-  crimes -> {
-    group_by: `Month` is `Date`.month
-    aggregate: Reports
-  }
+  crimes -> crimes_by_month

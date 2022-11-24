@@ -20,6 +20,10 @@ source: crimes is
       group_by: `Location Description`
       aggregate: Reports
     }
+    query: crimes_by_month is {
+      group_by: `Month` is `Date`.month
+      aggregate: Reports
+    }
   }
 
 -- Crimes Report Counts Summary
