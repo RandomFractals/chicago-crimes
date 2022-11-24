@@ -1,3 +1,13 @@
+# skip large data files
+crimes.csv
+crimes.csv.gz
+crimes.feather
+crimes.parquet
+Crimes_-_2001_to_Present.csv
+
+# skip default Rust target outupt
+/target
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
