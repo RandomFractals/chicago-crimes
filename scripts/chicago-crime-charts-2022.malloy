@@ -26,3 +26,10 @@ query: crimes_by_primary_type_summary is
 -- Crime Reports by Location Description
 query: crimes_by_location_description_bar_chart is
   crimes -> crimes_by_location_description { limit: 20 }
+
+-- Crime Reports by Month
+query: crimes_by_month_line_chart is
+  crimes -> {
+    group_by: `Month` is `Date`.month
+    aggregate: Reports
+  }
