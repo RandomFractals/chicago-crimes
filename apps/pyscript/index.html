@@ -24,6 +24,8 @@ from datetime import datetime
 from js import console
 from js import document
 
+info_element = document.getElementById('info')
+info_element.innerText = 'Loading Data ...'
 start_time = datetime.now()
 
 # read slimmed down 2022 crimes CSV data
@@ -36,14 +38,11 @@ crimes = pd.read_csv(open_url(crimes_data_url),
   cache_dates=True,
   low_memory=False)
 
-# calculate and log data load time
+# calculate, log, and display data load time
 end_time = datetime.now()
 load_time = (end_time - start_time).total_seconds()
-status = f'load time: {load_time} seconds'
+status = f'Load time: {load_time} seconds'
 console.log(status)
-
-# display data load time and first 100 data rows
-info_element = document.getElementById('info')
 info_element.innerText = status
 # print(crimes.head(100).to_html())
 
