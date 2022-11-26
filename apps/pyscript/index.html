@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Chicago Crimes PyScript App</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-config>
+packages = [
+  "pandas"
+]
+    </py-config>
+  </head>
+  <body>
+    <div id="info"></div>
+    <py-script output="info">
+import pandas as pd
+from pyodide.http import open_url
+from datetime import datetime
+from js import console
+from js import document
+
+info_element = document.getElementById('info')
+info_element.innerText = 'Loading data ...'
+start_time = datetime.now()
+
+# read 2022 crimes parquet data
+data_url = (
+  'https://raw.githubusercontent.com/RandomFractals/chicago-crimes/main/data'
+)
+crimes_data_url = f'{data_url}/crimes-2022.parquet'
+crimes = pd.read_parquet(open_url(crimes_data_url))
+
+# calculate and display data load time
+end_time = datatime.now()
+load_time = (end_time - start_time).total_seconds()
+status = f'load time: {load_time} seconds'
+console.log(status)
+info_element.innerText = status
+    </py-script>
+  </body>
+</html>
