@@ -12,7 +12,7 @@ packages = [
     </py-config>
   </head>
   <body>
-    <div id="info"></div>
+    <div id="info">Loading ...</div>
     <py-script output="info">
 import pandas as pd
 from pyodide.http import open_url
@@ -20,23 +20,28 @@ from datetime import datetime
 from js import console
 from js import document
 
-info_element = document.getElementById('info')
-info_element.innerText = 'Loading data ...'
 start_time = datetime.now()
 
 # read 2022 crimes parquet data
 data_url = (
   'https://raw.githubusercontent.com/RandomFractals/chicago-crimes/main/data'
 )
-crimes_data_url = f'{data_url}/crimes-2022.parquet'
-crimes = pd.read_parquet(open_url(crimes_data_url))
+crimes_data_url = f'{data_url}/crimes-2022-slim.csv'
+crimes = pd.read_csv(open_url(crimes_data_url),
+  parse_dates=['Date'],
+  cache_dates=True,
+  low_memory=False)
 
-# calculate and display data load time
-end_time = datatime.now()
+# calculate and log data load time
+end_time = datetime.now()
 load_time = (end_time - start_time).total_seconds()
 status = f'load time: {load_time} seconds'
 console.log(status)
+
+# display data load time
+info_element = document.getElementById('info')
 info_element.innerText = status
+print(crimes.head(100).to_html())
     </py-script>
   </body>
 </html>
