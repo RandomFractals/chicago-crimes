@@ -1,0 +1,72 @@
+{
+  "fields": [
+    {
+      "name": "Date",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Block",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Primary Type",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Description",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Location Description",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Arrest",
+      "type": "boolean",
+      "format": "default"
+    },
+    {
+      "name": "Domestic",
+      "type": "boolean",
+      "format": "default"
+    },
+    {
+      "name": "Beat",
+      "type": "any",
+      "format": "default"
+    },
+    {
+      "name": "District",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "Ward",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "Community Area",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "Latitude",
+      "type": "number",
+      "format": "default"
+    },
+    {
+      "name": "Longitude",
+      "type": "number",
+      "format": "default"
+    }
+  ],
+  "missingValues": [
+    ""
+  ]
+}
