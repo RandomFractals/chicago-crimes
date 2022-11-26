@@ -61,7 +61,20 @@ crime_type_counts = crimes[['Primary Type', 'Arrest', 'Domestic']]\
 crime_type_counts['Total'] = crime_type_total
 
 # print all crime stats (arrests, domestic, and totals)
-print(crime_type_counts.sort_values(by='Total', ascending=False).to_html())
+# print(crime_type_counts.sort_values(by='Total', ascending=False).to_html())
+
+# plot crimes by primary type counts
+all_crime_types = crime_type_counts.sort_values(by='Total', ascending=True)\
+    .drop(['Arrest', 'Domestic'], axis=1)  # denotes column
+
+all_crime_types.plot(kind='barh', figsize=(10, 8), color='#cc0000')
+plt.title('All Chicago Crimes by Type for 2022)')
+plt.xlabel('Number of Crime reports')
+plt.ylabel('Crime Type')
+plt.tight_layout()
+ax = plt.gca()
+ax.xaxis.set_major_formatter(ticker.StrMethodFormatter('{x:,.0f}'))
+plt
     </py-script>
   </body>
 </html>
