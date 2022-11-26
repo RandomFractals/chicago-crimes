@@ -22,7 +22,7 @@ from js import document
 
 start_time = datetime.now()
 
-# read 2022 crimes parquet data
+# read slimmed down 2022 crimes CSV data
 data_url = (
   'https://raw.githubusercontent.com/RandomFractals/chicago-crimes/main/data'
 )
@@ -38,7 +38,7 @@ load_time = (end_time - start_time).total_seconds()
 status = f'load time: {load_time} seconds'
 console.log(status)
 
-# display data load time
+# display data load time and first 100 data rows
 info_element = document.getElementById('info')
 info_element.innerText = status
 print(crimes.head(100).to_html())
