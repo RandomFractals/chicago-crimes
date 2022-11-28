@@ -58,7 +58,7 @@ alt.Chart(crimes_by_type[0:20]).mark_bar().encode(
     {'field': 'Primary Type', 'type': 'nominal', 'title': 'Crime Type'},
     {'field': 'Total', 'type': 'quantitative', 'title': 'Reports'}
   ]
-)
+).properties(title='Chicago Crime Reports by Type - 2022')
     </py-script>
   </body>
 </html>
