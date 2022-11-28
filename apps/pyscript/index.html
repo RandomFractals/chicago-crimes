@@ -7,17 +7,16 @@
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     <py-config>
 packages = [
-  "pandas",
-  "matplotlib"
+  "altair"
+  "pandas"
 ]
     </py-config>
   </head>
   <body>
     <div id="info">Loading ...</div>
     <py-script output="info">
+import altair as alt
 import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 
 from pyodide.http import open_url
 from datetime import datetime
@@ -46,34 +45,20 @@ console.log(status)
 info_element.innerText = status
 # print(crimes.head(100).to_html())
 
-# get crime types
-crime_types = crimes[['Primary Type']]
-
 # get crime counts by primary type
-crime_type_total = crime_types.groupby('Primary Type').size()
+crimes_by_type = crimes.groupby('Primary Type').size().to_frame(name='Total')
+crimes_by_type = crimes_by_type.reset_index().sort_values(by=['Total'], ascending=False)
+# print(crimes_by_type.to_html())
 
-# get arrests and domestic counts for each primary crime type
-crime_type_counts = crimes[['Primary Type', 'Arrest', 'Domestic']]\
-    .groupby('Primary Type').sum()
-
-# add crime type totals column
-crime_type_counts['Total'] = crime_type_total
-
-# print all crime stats (arrests, domestic, and totals)
-# print(crime_type_counts.sort_values(by='Total', ascending=False).to_html())
-
-# plot crimes by primary type counts
-all_crime_types = crime_type_counts.sort_values(by='Total', ascending=True)\
-    .drop(['Arrest', 'Domestic'], axis=1)  # denotes column
-
-all_crime_types.plot(kind='barh', figsize=(10, 8), color='#cc0000')
-plt.title('All Chicago Crimes by Type for 2022)')
-plt.xlabel('Number of Crime reports')
-plt.ylabel('Crime Type')
-plt.tight_layout()
-ax = plt.gca()
-ax.xaxis.set_major_formatter(ticker.StrMethodFormatter('{x:,.0f}'))
-plt
+# create crimes by type bar chart
+alt.Chart(crimes_by_type[0:20]).mark_bar().encode(
+  x={'field': 'Total', 'type': 'quantitative', 'title': 'Reports'},
+  y={'field': 'Primary Type', 'type': 'nominal', 'title': 'Crime', 'sort': 'x'},
+  tooltip=[
+    {'field': 'Primary Type', 'type': 'nominal', 'title': 'Crime Type'},
+    {'field': 'Total', 'type': 'quantitative', 'title': 'Reports'}
+  ]
+)
     </py-script>
   </body>
 </html>
