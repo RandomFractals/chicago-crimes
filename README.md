@@ -97,6 +97,13 @@ Displaying Chicago crimes 2022 `parquet` data with [Malloy Charts](https://looke
 ![Chicago Crimes Malloy Charts Summary](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-by-type-malloy-summary.png?raw=true
  "Chicago Crimes Malloy Charts Summary")
 
+### With Pandas
+
+Loading Chicago crimes `CSV` data with [Pandas](https://pandas.pydata.org/docs/reference/index.html):
+
+![Chicago Crimes Pandas Notebook](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-pandas.png?raw=true
+ "Chicago Crimes Pandas Notebook")
+
 ### In R Studio
 
 Loading Chicago crimes `CSV` data with [DBI](https://dbi.r-dbi.org/) R library and [DuckDB R API](https://duckdb.org/docs/api/r) in [R Studio](https://www.rstudio.com/):
