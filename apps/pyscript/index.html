@@ -53,7 +53,7 @@ crimes_by_type = crimes_by_type.reset_index().sort_values(by=['Total'], ascendin
 # create crimes by type bar chart
 crimes_by_type_chart = alt.Chart(crimes_by_type[0:20]).mark_bar().encode(
   x={'field': 'Total', 'type': 'quantitative', 'title': 'Reports'},
-  y={'field': 'Primary Type', 'type': 'nominal', 'title': 'Crime', 'sort': 'x'},
+  y={'field': 'Primary Type', 'type': 'nominal', 'title': 'Crime', 'sort': '-x'},
   tooltip=[
     {'field': 'Primary Type', 'type': 'nominal', 'title': 'Crime Type'},
     {'field': 'Total', 'type': 'quantitative', 'title': 'Reports'}
