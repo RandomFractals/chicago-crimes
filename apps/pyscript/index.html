@@ -77,10 +77,25 @@ daily_arrestss_chart = alt.Chart(daily_arrests).mark_line().encode(
   tooltip=['Arrests', 'Date']
 ).properties(title='Dialy Chicago Arrests - 2022')
 
+# get domestic crime reports
+domestic_reports = crimes[crimes['Domestic'] == True]['Domestic']
+
+# sum domestic crime reports per month
+daily_domestic_reports = domestic_reports.resample('D').sum().to_frame(name='Reports')
+daily_domestic_reports = daily_domestic_reports.reset_index()
+
+# plot monthly domestic crime reports
+daily_domestic_reports_chart = alt.Chart(daily_domestic_reports).mark_line().encode(
+  x='Date:T',
+  y='Reports:Q',
+  tooltip=['Reports', 'Date']
+).properties(title='Daily Domestic Chicago Crime Reports - 2022')
+
 # combine and show Altair charts
 alt.vconcat(
   crimes_by_type_chart,
-  daily_arrestss_chart
+  daily_arrestss_chart,
+  daily_domestic_reports_chart
 )
     </py-script>
   </body>
