@@ -63,6 +63,21 @@ crimes_by_type_chart = alt.Chart(crimes_by_type[0:20]).mark_bar().encode(
 # set Date index for time series plots
 crimes.index = crimes['Date']
 
+# get crimes by type
+crimes_by_type = crimes[['Primary Type']]
+
+# sum daily crime reports
+daily_reports = crimes_by_type.resample('D').count()
+daily_reports.columns = ['Reports'] # rename Primary Type column
+daily_reports = daily_reports.reset_index()
+
+# plot daily crime reports
+daily_reports_chart = alt.Chart(daily_reports).mark_line().encode(
+  x='Date:T',
+  y='Reports:Q',
+  tooltip=['Reports', 'Date']
+).properties(title='Dialy Chicago Crime Reports - 2022')
+
 # get arrests
 arrests = crimes[crimes['Arrest'] == True]['Arrest']
 
@@ -70,7 +85,7 @@ arrests = crimes[crimes['Arrest'] == True]['Arrest']
 daily_arrests = arrests.resample('D').sum().to_frame(name='Arrests')
 daily_arrests = daily_arrests.reset_index()
 
-# plot monthly arrests
+# plot daily arrests
 daily_arrestss_chart = alt.Chart(daily_arrests).mark_line().encode(
   x='Date:T',
   y='Arrests:Q',
@@ -80,11 +95,11 @@ daily_arrestss_chart = alt.Chart(daily_arrests).mark_line().encode(
 # get domestic crime reports
 domestic_reports = crimes[crimes['Domestic'] == True]['Domestic']
 
-# sum domestic crime reports per month
+# sum domestic crime reports per day
 daily_domestic_reports = domestic_reports.resample('D').sum().to_frame(name='Reports')
 daily_domestic_reports = daily_domestic_reports.reset_index()
 
-# plot monthly domestic crime reports
+# plot daily domestic crime reports
 daily_domestic_reports_chart = alt.Chart(daily_domestic_reports).mark_line().encode(
   x='Date:T',
   y='Reports:Q',
@@ -94,6 +109,7 @@ daily_domestic_reports_chart = alt.Chart(daily_domestic_reports).mark_line().enc
 # combine and show Altair charts
 alt.vconcat(
   crimes_by_type_chart,
+  daily_reports_chart,
   daily_arrestss_chart,
   daily_domestic_reports_chart
 )
