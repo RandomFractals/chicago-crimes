@@ -104,6 +104,13 @@ Loading Chicago crimes `CSV` data with [Pandas](https://pandas.pydata.org/docs/r
 ![Chicago Crimes Pandas Notebook](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-pandas.png?raw=true
  "Chicago Crimes Pandas Notebook")
 
+### With Matplotlib
+
+Visualizing Chicago crimes data loaded with Pandas using [Matplotlib](https://pandas.pydata.org/docs/user_guide/visualization.html):
+
+![Chicago Crimes Matplotlib Chart](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-matplotlib.png?raw=true
+ "Chicago Crimes Matplotlib Chart")
+
 ### In R Studio
 
 Loading Chicago crimes `CSV` data with [DBI](https://dbi.r-dbi.org/) R library and [DuckDB R API](https://duckdb.org/docs/api/r) in [R Studio](https://www.rstudio.com/):
