@@ -153,6 +153,24 @@ low_crime_communities_chart = alt.Chart(community_crime.tail(20)).mark_bar().enc
   tooltip=['CommunityName', 'Reports']
 ).properties(title='Bottom 20 Low Crime Chicago Communities - 2022')
 
+# get narcotics crimes
+narcotics = crimes[crimes['Primary Type'] == 'NARCOTICS']
+
+# get narcotics crime description counts
+narcotics_crimes = narcotics[['Primary Type', 'Description']]\
+    .groupby('Description').count()\
+    .sort_values(by='Primary Type', ascending=False)
+narcotics_crimes.columns = ['Reports']  # rename Primary Type column
+narcotics_crimes = narcotics_crimes.reset_index()
+
+# plot top 20 narcotics crime reports by description
+narcotic_crimes_chart = alt.Chart(narcotics_crimes[0:20]).mark_bar().encode(
+  x={'field': 'Reports', 'type': 'quantitative'},
+  y={'field': 'Description', 'type': 'nominal', 'sort': '-x'},
+  tooltip=['Description', 'Reports'],
+  color=alt.value('crimson')
+).properties(title='Top 20 Chicago Narcotics Crime Reports - 2022')
+
 # combine and show Altair charts
 alt.vconcat(
   crimes_by_type_chart,
@@ -161,7 +179,8 @@ alt.vconcat(
   daily_domestic_reports_chart,
   crime_locations_chart,
   high_crime_communities_chart,
-  low_crime_communities_chart
+  low_crime_communities_chart,
+  narcotic_crimes_chart
 )
     </py-script>
   </body>
