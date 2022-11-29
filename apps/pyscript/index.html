@@ -146,6 +146,13 @@ high_crime_communties_chart = alt.Chart(community_crime[0:20]).mark_bar().encode
   color=alt.value('crimson')
 ).properties(title='Top 20 High Crime Chicago Communities - 2022')
 
+# plot 20 low crime communities
+low_crime_communties_chart = alt.Chart(community_crime.tail(20)).mark_bar().encode(
+  x={'field': 'Reports', 'type': 'quantitative'},
+  y={'field': 'CommunityName', 'type': 'nominal', 'title': 'Community', 'sort': 'x'},
+  tooltip=['CommunityName', 'Reports']
+).properties(title='Bottom 20 Low Crime Chicago Communities - 2022')
+
 # combine and show Altair charts
 alt.vconcat(
   crimes_by_type_chart,
@@ -153,7 +160,8 @@ alt.vconcat(
   daily_arrestss_chart,
   daily_domestic_reports_chart,
   crime_locations_chart,
-  high_crime_communties_chart
+  high_crime_communties_chart,
+  low_crime_communties_chart
 )
     </py-script>
   </body>
