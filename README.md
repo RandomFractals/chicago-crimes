@@ -104,13 +104,6 @@ Loading Chicago crimes `CSV` data with [Pandas](https://pandas.pydata.org/docs/r
 ![Chicago Crimes Pandas Notebook](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-pandas.png?raw=true
  "Chicago Crimes Pandas Notebook")
 
-### With Matplotlib
-
-Visualizing Chicago crimes data loaded with Pandas using [Matplotlib](https://pandas.pydata.org/docs/user_guide/visualization.html):
-
-![Chicago Crimes Matplotlib Chart](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-matplotlib.png?raw=true
- "Chicago Crimes Matplotlib Chart")
-
 ### In R Studio
 
 Loading Chicago crimes `CSV` data with [DBI](https://dbi.r-dbi.org/) R library and [DuckDB R API](https://duckdb.org/docs/api/r) in [R Studio](https://www.rstudio.com/):
@@ -139,11 +132,15 @@ Reading Chicago crimes `CSV` data with [SBCL](https://sbcl.org/) + [cl-duckdb](h
 ![Chicago Crimes CSV to DuckDB in Emacs](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-in-emacs.png?raw=true
  "Chicago Crimes CSV to DuckDB in Emacs")
 
-...
+## Visualizations
 
-More In & With sections of viewing Chicago crimes data with different open source data tools in the wild to come next weekend
+Collection of Jupyter [notebooks](https://github.com/RandomFractals/chicago-crimes/tree/main/notebooks) and [data apps](https://github.com/RandomFractals/chicago-crimes/tree/main/apps) visualizing Chicago crimes data from above.
+### With Matplotlib
 
-...
+Visualizing Chicago crimes data loaded with Pandas using [Matplotlib](https://pandas.pydata.org/docs/user_guide/visualization.html):
+
+![Chicago Crimes Matplotlib Chart](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-matplotlib.png?raw=true
+ "Chicago Crimes Matplotlib Chart")
 
 ## Prior Works
 
