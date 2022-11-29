@@ -57,7 +57,8 @@ crimes_by_type_chart = alt.Chart(crimes_by_type[0:20]).mark_bar().encode(
   tooltip=[
     {'field': 'Primary Type', 'type': 'nominal', 'title': 'Crime Type'},
     {'field': 'Total', 'type': 'quantitative', 'title': 'Reports'}
-  ]
+  ],
+  color=alt.value('crimson')
 ).properties(title='Chicago Crime Reports by Type - 2022')
 
 # set Date index for time series plots
@@ -75,7 +76,8 @@ daily_reports = daily_reports.reset_index()
 daily_reports_chart = alt.Chart(daily_reports).mark_line().encode(
   x='Date:T',
   y='Reports:Q',
-  tooltip=['Reports', 'Date']
+  tooltip=['Reports', 'Date'],
+  color=alt.value('crimson')
 ).properties(title='Dialy Chicago Crime Reports - 2022')
 
 # get arrests
@@ -89,7 +91,8 @@ daily_arrests = daily_arrests.reset_index()
 daily_arrestss_chart = alt.Chart(daily_arrests).mark_line().encode(
   x='Date:T',
   y='Arrests:Q',
-  tooltip=['Arrests', 'Date']
+  tooltip=['Arrests', 'Date'],
+  color=alt.value('crimson')
 ).properties(title='Dialy Chicago Arrests - 2022')
 
 # get domestic crime reports
@@ -103,7 +106,8 @@ daily_domestic_reports = daily_domestic_reports.reset_index()
 daily_domestic_reports_chart = alt.Chart(daily_domestic_reports).mark_line().encode(
   x='Date:T',
   y='Reports:Q',
-  tooltip=['Reports', 'Date']
+  tooltip=['Reports', 'Date'],
+  color=alt.value('crimson')
 ).properties(title='Daily Domestic Chicago Crime Reports - 2022')
 
 # get crime location counts
@@ -115,7 +119,8 @@ crime_locations = crime_locations.sort_values(
 crime_locations_chart = alt.Chart(crime_locations[0:20]).mark_bar().encode(
   x={'field': 'Reports', 'type': 'quantitative'},
   y={'field': 'Location Description', 'type': 'nominal', 'sort': '-x'},
-  tooltip=['Location Description', 'Reports']
+  tooltip=['Location Description', 'Reports'],
+  color=alt.value('crimson')
 ).properties(title='Top 20 Chicago Crime Locations - 2022')
 
 # load Chicago community areas for plotting crime
@@ -137,7 +142,8 @@ community_crime = community_crime.drop(
 high_crime_communties_chart = alt.Chart(community_crime[0:20]).mark_bar().encode(
   x={'field': 'Reports', 'type': 'quantitative'},
   y={'field': 'CommunityName', 'type': 'nominal', 'title': 'Community', 'sort': '-x'},
-  tooltip=['CommunityName', 'Reports']
+  tooltip=['CommunityName', 'Reports'],
+  color=alt.value('crimson')
 ).properties(title='Top 20 High Crime Chicago Communities - 2022')
 
 # combine and show Altair charts
