@@ -90,13 +90,6 @@ Loading Chicago crimes 2022 `parquet` data with [Malloy Data](https://looker-ope
 ![Chicago Crimes with Malloy](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-duckdb-malloy-2022.png?raw=true
  "Chicago Crimes with Malloy")
 
-### With Malloy Charts
-
-Displaying Chicago crimes 2022 `parquet` data with [Malloy Charts](https://looker-open-source.github.io/malloy/documentation/visualizations/dashboards.html) using [Malloy Import](https://looker-open-source.github.io/malloy/documentation/language/imports.html) with table source, measures, and data queries defined above:
-
-![Chicago Crimes Malloy Charts Summary](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-by-type-malloy-summary.png?raw=true
- "Chicago Crimes Malloy Charts Summary")
-
 ### With Pandas
 
 Loading Chicago crimes `CSV` data with [Pandas](https://pandas.pydata.org/docs/reference/index.html):
@@ -141,6 +134,13 @@ Visualizing Chicago crimes data loaded with Pandas using [Matplotlib](https://pa
 
 ![Chicago Crimes Matplotlib Chart](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-with-matplotlib.png?raw=true
  "Chicago Crimes Matplotlib Chart")
+
+### With Malloy Charts
+
+Displaying Chicago crimes 2022 `parquet` data with [Malloy Charts](https://looker-open-source.github.io/malloy/documentation/visualizations/dashboards.html) using [Malloy Import](https://looker-open-source.github.io/malloy/documentation/language/imports.html) with table source, measures, and data queries defined above:
+
+![Chicago Crimes Malloy Charts Summary](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-by-type-malloy-summary.png?raw=true
+ "Chicago Crimes Malloy Charts Summary")
 
 ## Prior Works
 
