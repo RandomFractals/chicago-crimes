@@ -189,6 +189,20 @@ other_offenses_chart = alt.Chart(other_offense_crimes[0:20]).mark_bar().encode(
   color=alt.value('crimson')
 ).properties(title='Top 20 Other Offense Chicago Crime Reports - 2022')
 
+# get homicides
+homicides = crimes[crimes['Primary Type'] == 'HOMICIDE']['Primary Type']
+
+# create daily homicide counts
+daily_homicides = homicides.resample('D').count().to_frame(name='Reports')
+daily_homicides = daily_homicides.reset_index()
+
+daily_homicides_chart = alt.Chart(daily_homicides).mark_line().encode(
+    x='Date:T',
+    y='Reports:Q',
+    tooltip=['Date', 'Reports'],
+    color=alt.value('crimson')
+).properties(title='Daily Chicago Homicide Reports - 2022')
+
 # combine and show Altair charts
 alt.vconcat(
   crimes_by_type_chart,
@@ -199,7 +213,8 @@ alt.vconcat(
   high_crime_communities_chart,
   low_crime_communities_chart,
   narcotic_crimes_chart,
-  other_offenses_chart
+  other_offenses_chart,
+  daily_homicides_chart
 )
     </py-script>
   </body>
