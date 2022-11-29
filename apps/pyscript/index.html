@@ -118,13 +118,36 @@ crime_locations_chart = alt.Chart(crime_locations[0:20]).mark_bar().encode(
   tooltip=['Location Description', 'Reports']
 ).properties(title='Top 20 Chicago Crime Locations - 2022')
 
+# load Chicago community areas for plotting crime
+# by Chicago sides and community areas
+community_data_url = f'{data_url}/chicago-community-areas.csv'
+community_areas = pd.read_csv(open_url(community_data_url))
+
+# get community crime stats
+community_areas['Reports'] = crimes.groupby(
+    'Community Area').size().rename('Reports')
+community_crime = community_areas.sort_values(
+    by='Reports', ascending=False).dropna()
+
+# drop unused columns and reindex
+community_crime = community_crime.drop(
+    ['CommunityArea', 'Side'], axis=1)  # denotes column
+
+# plot 20 high crime communities
+high_crime_communties_chart = alt.Chart(community_crime[0:20]).mark_bar().encode(
+  x={'field': 'Reports', 'type': 'quantitative'},
+  y={'field': 'CommunityName', 'type': 'nominal', 'title': 'Community', 'sort': '-x'},
+  tooltip=['CommunityName', 'Reports']
+).properties(title='Top 20 High Crime Chicago Communities - 2022')
+
 # combine and show Altair charts
 alt.vconcat(
   crimes_by_type_chart,
   daily_reports_chart,
   daily_arrestss_chart,
   daily_domestic_reports_chart,
-  crime_locations_chart
+  crime_locations_chart,
+  high_crime_communties_chart
 )
     </py-script>
   </body>
