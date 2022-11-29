@@ -106,12 +106,25 @@ daily_domestic_reports_chart = alt.Chart(daily_domestic_reports).mark_line().enc
   tooltip=['Reports', 'Date']
 ).properties(title='Daily Domestic Chicago Crime Reports - 2022')
 
+# get crime location counts
+crime_locations = crimes.groupby('Location Description').size()
+crime_locations = crime_locations.sort_values(
+    ascending=False).rename('Reports').reset_index()
+
+# plot top 20 crime locations
+crime_locations_chart = alt.Chart(crime_locations[0:20]).mark_bar().encode(
+  x={'field': 'Reports', 'type': 'quantitative'},
+  y={'field': 'Location Description', 'type': 'nominal', 'sort': '-x'},
+  tooltip=['Location Description', 'Reports']
+).properties(title='Top 20 Chicago Crime Locations - 2022')
+
 # combine and show Altair charts
 alt.vconcat(
   crimes_by_type_chart,
   daily_reports_chart,
   daily_arrestss_chart,
-  daily_domestic_reports_chart
+  daily_domestic_reports_chart,
+  crime_locations_chart
 )
     </py-script>
   </body>
