@@ -171,6 +171,24 @@ narcotic_crimes_chart = alt.Chart(narcotics_crimes[0:20]).mark_bar().encode(
   color=alt.value('crimson')
 ).properties(title='Top 20 Chicago Narcotics Crime Reports - 2022')
 
+# get other offenses crimes
+other_offenses = crimes[crimes['Primary Type'] == 'OTHER OFFENSE']
+
+# get other offense crime description counts
+other_offense_crimes = other_offenses[['Primary Type', 'Description']]\
+    .groupby('Description').count()\
+    .sort_values(by='Primary Type', ascending=False)
+other_offense_crimes.columns = ['Reports']  # rename Primary Type column
+other_offense_crimes = other_offense_crimes.reset_index()
+
+# plot top 20 other offense crime reports by description
+other_offenses_chart = alt.Chart(other_offense_crimes[0:20]).mark_bar().encode(
+  x={'field': 'Reports', 'type': 'quantitative'},
+  y={'field': 'Description', 'type': 'nominal', 'sort': '-x'},
+  tooltip=['Description', 'Reports'],
+  color=alt.value('crimson')
+).properties(title='Top 20 Other Offense Chicago Crime Reports - 2022')
+
 # combine and show Altair charts
 alt.vconcat(
   crimes_by_type_chart,
@@ -180,7 +198,8 @@ alt.vconcat(
   crime_locations_chart,
   high_crime_communities_chart,
   low_crime_communities_chart,
-  narcotic_crimes_chart
+  narcotic_crimes_chart,
+  other_offenses_chart
 )
     </py-script>
   </body>
