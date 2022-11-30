@@ -139,8 +139,17 @@ Visualizing Chicago crimes data loaded with Pandas using [Matplotlib](https://pa
 
 2001-2022 Chicago crimes data loaded from a `parquet` file and summarized with Pandas and [Altair](https://altair-viz.github.io/) charts:
 
-![Chicago Crimes Matplotlib Chart](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-altair-charts-ipynb.gif?raw=true
- "Chicago Crimes Matplotlib Chart")
+![Chicago Crimes Altair Charts Notebook](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-altair-charts-ipynb.gif?raw=true
+ "Chicago Crimes Altair Charts Notebook")
+
+### With PyScript
+
+2022 Chicago crimes data loaded from a `CSV` file with data summary Altair charts in a browser, using [Pyodide](https://pyodide.org/en/stable/) runtime and Pandas:
+
+https://randomfractals.github.io/chicago-crimes/apps/pyscript/
+
+![Chicago Crimes PyScript Page](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-pyscript-page.gif?raw=true
+ "Chicago Crimes PyScript Page")
 
 ### With Malloy Charts
 
