@@ -1,4 +1,4 @@
-import "./chicago-crimes-duckdb-2022.malloy"
+import "chicago-crimes-duckdb-2022.malloy"
 
 -- Crimes Report Dashboard
 query: crimes_dashboard is crimes -> {
