@@ -21,6 +21,17 @@ query: crimes_by_primary_type_and_description is crimes -> {
 }
 ```
 
+<!-- malloy-query
+  name="Crime Reports by Primary Type with Nested Description"
+  model="crimes.malloy"
+-->
+```malloy
+query: crimes_by_primary_type_with_description is
+  crimes -> crimes_by_primary_type + {
+    nest: crimes_by_description
+  }
+```
+
 ## About Malloy Composer
 
 Composer is implemented using Malloy, DuckDB and WASM and runs completely
