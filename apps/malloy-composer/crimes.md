@@ -76,8 +76,7 @@ query: crimes_by_location_description_bar_chart is
   model="crimes.malloy"
 -->
 ```malloy
-query: crimes_by_month_line_chart is
-  crimes -> crimes_by_month
+query: crimes -> crimes_by_month_line_chart
 ```
 ## About Malloy Composer
 
