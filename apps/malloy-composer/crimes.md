@@ -2,7 +2,7 @@
 
 Data Source: https://data.cityofchicago.org/Public-Safety/Crimes-2022/9hwr-2zxp
 
-Chicago crimes 2022 data has been trimmed down and converted to parquet data format for faster loading in Malloy Composer app.
+Reported 2022 Chicago crimes data has been trimmed down and converted to [parquet](https://github.com/RandomFractals/chicago-crimes/blob/main/data/crimes-2022-slim.parquet) data format for faster loading in Malloy Composer app.
 
 ## What is this?
 
