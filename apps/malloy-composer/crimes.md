@@ -35,6 +35,7 @@ query: crimes_by_primary_type_with_description is
 <!-- malloy-query
   name="Crime Reports by Primary Type"
   model="crimes.malloy"
+  renderer="bar_chart"
 -->
 ```malloy
 query: crimes_by_primary_type_bar_chart is
@@ -44,6 +45,7 @@ query: crimes_by_primary_type_bar_chart is
 <!-- malloy-query
   name="Crime Reports by Description"
   model="crimes.malloy"
+  renderer="bar_chart"
 -->
 ```malloy
 query: crimes_by_description_bar_chart is
@@ -65,6 +67,7 @@ query: crimes_by_primary_type_summary is
 <!-- malloy-query
   name="Crime Reports by Location Description"
   model="crimes.malloy"
+  renderer="bar_chart"
 -->
 ```malloy
 query: crimes_by_location_description_bar_chart is
@@ -74,6 +77,7 @@ query: crimes_by_location_description_bar_chart is
 <!-- malloy-query
   name="Crime Reports by Month"
   model="crimes.malloy"
+  renderer="line_chart"
 -->
 ```malloy
 query: crimes_by_month_line_chart is
