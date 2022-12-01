@@ -10,27 +10,6 @@ Reported 2022 Chicago crimes data has been trimmed down and converted to [parque
 
 ## View Crime Reports
 
-<!-- malloy-query
-  name="Crime Reports by Primary Type and Description"
-  model="crimes.malloy"
--->
-```malloy
-query: crimes_by_primary_type_and_description is crimes -> {
-  group_by: `Primary Type`, Description
-  aggregate: Reports
-}
-```
-
-<!-- malloy-query
-  name="Crime Reports by Primary Type with Nested Description"
-  model="crimes.malloy"
--->
-```malloy
-query: crimes_by_primary_type_with_description is
-  crimes -> crimes_by_primary_type + {
-    nest: crimes_by_description
-  }
-```
 
 <!-- malloy-query
   name="Crime Reports by Primary Type"
@@ -53,15 +32,14 @@ query: crimes_by_description_bar_chart is
 ```
 
 <!-- malloy-query
-  name="Crime Reports by Primary Type with nested Description Summary"
+  name="Crime Reports by Primary Type and Description"
   model="crimes.malloy"
 -->
 ```malloy
-query: crimes_by_primary_type_summary is
-  crimes -> crimes_by_primary_type + {
-    nest: crimes_by_description_bar_chart is
-      crimes_by_description { limit: 10 }
-    }
+query: crimes_by_primary_type_and_description is crimes -> {
+  group_by: `Primary Type`, Description
+  aggregate: Reports
+}
 ```
 
 <!-- malloy-query
@@ -83,6 +61,30 @@ query: crimes_by_location_description_bar_chart is
 query: crimes_by_month_line_chart is
   crimes -> crimes_by_month
 ```
+
+<!-- malloy-query
+  name="Crime Reports by Primary Type with Nested Description"
+  model="crimes.malloy"
+-->
+```malloy
+query: crimes_by_primary_type_with_description is
+  crimes -> crimes_by_primary_type + {
+    nest: crimes_by_description
+  }
+```
+
+<!-- malloy-query
+  name="Crime Reports by Primary Type with nested Description Summary"
+  model="crimes.malloy"
+-->
+```malloy
+query: crimes_by_primary_type_summary is
+  crimes -> crimes_by_primary_type + {
+    nest: crimes_by_description_bar_chart is
+      crimes_by_description { limit: 10 }
+    }
+```
+
 ## About Malloy Composer
 
 Composer is implemented using Malloy, DuckDB and WASM and runs completely
