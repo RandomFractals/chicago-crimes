@@ -22,5 +22,4 @@ source: crimes is table('crimes.parquet') {
       group_by: `Month` is `Date`.month
       aggregate: Reports
     }
-    query: crimes_by_month_line_chart is crimes_by_month
   }
