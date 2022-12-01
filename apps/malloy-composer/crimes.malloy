@@ -1,5 +1,4 @@
 source: crimes is table('crimes.parquet') {
-    primary_key: ID
     measure: Reports is count()
     measure: Arrests is Reports {
       where: Arrest = true
