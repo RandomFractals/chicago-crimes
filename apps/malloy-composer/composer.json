@@ -1,6 +1,6 @@
 {
   "readme": "crimes.md",
-  "title": "Chicago Crimes - 2022",
+  "title": "2022 Chicago Crime Reports",
   "models": [
     {
       "id": "crimes",
