@@ -1,0 +1,16 @@
+{
+  "readme": "crimes.md",
+  "title": "Chicago Crimes - 2022",
+  "models": [
+    {
+      "id": "crimes",
+      "path": "crimes.malloy",
+      "tables": [
+        {
+          "name": "crimes.parquet",
+          "url": "https://randomfractals.github.io/chicago-crimes/data/crimes-2022-slim.parquet"
+        }
+      ]
+    }
+  ]
+}
