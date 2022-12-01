@@ -86,6 +86,29 @@ query: crimes_by_primary_type_summary is
 ```
 
 <!-- malloy-query
+  name="Crime Reports by Primary Type with Monthly Counts Summary and Top Locations"
+  model="crimes.malloy"
+-->
+```malloy
+query: crimes_by_type_month_and_location is {
+    group_by: `Primary Type`
+    aggregate:
+      Reports
+      percent_of_reports is Reports/all(Reports)
+    nest:
+      crimes_by_month
+      top_locations is {
+        group_by: `Location Description`
+        aggregate:
+          Reports
+          percent_of_reports is Reports/all(Reports)
+        limit: 15
+      }
+    limit: 10
+  }
+```
+
+<!-- malloy-query
   name="Reported Bike Thefts"
   model="crimes.malloy"
 -->
