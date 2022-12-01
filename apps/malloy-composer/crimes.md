@@ -90,7 +90,7 @@ query: crimes_by_primary_type_summary is
   model="crimes.malloy"
 -->
 ```malloy
-query: crimes_by_type_month_and_location is {
+query: crimes_by_type_month_and_location is crimes -> {
     group_by: `Primary Type`
     aggregate:
       Reports
@@ -113,7 +113,7 @@ query: crimes_by_type_month_and_location is {
   model="crimes.malloy"
 -->
 ```malloy
-query: bike_thefts is {
+query: bike_thefts is crimes -> {
     where: Description ~ '%BIKE%'
     group_by: `Primary Type`
     aggregate:
