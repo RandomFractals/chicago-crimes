@@ -85,6 +85,34 @@ query: crimes_by_primary_type_summary is
     }
 ```
 
+<!-- malloy-query
+  name="Reported Bike Thefts"
+  model="crimes.malloy"
+-->
+```malloy
+query: bike_thefts is {
+    where: Description ~ '%BIKE%'
+    group_by: `Primary Type`
+    aggregate:
+      Reports
+      percent_of_reports is Reports/all(Reports)
+    nest:
+      crimes_by_month
+      top_locations is {
+        group_by: `Location Description`
+        aggregate:
+          Reports
+          percent_of_reports is Reports/all(Reports)
+        limit: 15
+      }
+      crimes_by_description is {
+        group_by: Description
+        aggregate: Reports
+        limit: 10
+      }
+    limit: 10
+  }
+```
 ## About Malloy Composer
 
 Composer is implemented using Malloy, DuckDB and WASM and runs completely
