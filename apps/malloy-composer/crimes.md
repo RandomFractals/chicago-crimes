@@ -32,6 +32,53 @@ query: crimes_by_primary_type_with_description is
   }
 ```
 
+<!-- malloy-query
+  name="Crime Reports by Primary Type"
+  model="crimes.malloy"
+-->
+```malloy
+query: crimes_by_primary_type_bar_chart is
+  crimes -> crimes_by_primary_type
+```
+
+<!-- malloy-query
+  name="Crime Reports by Description"
+  model="crimes.malloy"
+-->
+```malloy
+query: crimes_by_description_bar_chart is
+  crimes -> crimes_by_description { limit: 20 }
+```
+
+<!-- malloy-query
+  name="Crime Reports by Primary Type with nested Description Summary"
+  model="crimes.malloy"
+-->
+```malloy
+query: crimes_by_primary_type_summary is
+  crimes -> crimes_by_primary_type + {
+    nest: crimes_by_description_bar_chart is
+      crimes_by_description { limit: 10 }
+    }
+```
+
+<!-- malloy-query
+  name="Crime Reports by Location Description"
+  model="crimes.malloy"
+-->
+```malloy
+query: crimes_by_location_description_bar_chart is
+  crimes -> crimes_by_location_description { limit: 20 }
+```
+
+<!-- malloy-query
+  name="Crime Reports by Month"
+  model="crimes.malloy"
+-->
+```malloy
+query: crimes_by_month_line_chart is
+  crimes -> crimes_by_month
+```
 ## About Malloy Composer
 
 Composer is implemented using Malloy, DuckDB and WASM and runs completely
