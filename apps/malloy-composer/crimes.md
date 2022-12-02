@@ -139,7 +139,4 @@ query: crimes_by_month_line_chart is
 
 ## About Malloy Composer
 
-Composer is implemented using Malloy, DuckDB and WASM and runs completely
-in your browser.  Javascript code is compled from here:
-
-https://github.com/malloydata/malloy-composer
+Malloy Composer is implemented using [Malloy](https://github.com/malloydata/malloy) with [DuckDB WASM](https://github.com/duckdb/duckdb-wasm) and runs completely in your browser. See [Malloy Composer](https://github.com/malloydata/malloy-composer) github repository for more information and Composer app [configuration options](https://github.com/malloydata/malloy-composer#config-file-examples).
