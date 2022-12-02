@@ -40,3 +40,27 @@ query: crimes_by_primary_type is
       group_by: `Primary Type`
     }
   }
+
+-- Bike Thefts
+query: bike_thefts is crimes -> {
+  where: Description ~ '%BIKE%'
+  group_by: `Primary Type`
+  aggregate:
+    Reports
+    percent_of_reports is Reports/all(Reports)
+  nest:
+    crimes_by_month_line_chart
+    top_locations is {
+      group_by: `Location Description`
+      aggregate:
+        Reports
+        percent_of_reports is Reports/all(Reports)
+      limit: 15
+    }
+    crimes_by_description is {
+      group_by: Description
+      aggregate: Reports
+      limit: 10
+    }
+  limit: 10
+}
