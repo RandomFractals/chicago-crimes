@@ -10,59 +10,6 @@ Reported 2022 Chicago crimes data has been trimmed down and converted to [parque
 
 ## View Crime Reports
 
-
-<!-- malloy-query
-  name="Crime Reports by Primary Type"
-  model="crimes.malloy"
-  renderer="bar_chart"
--->
-```malloy
-query: crimes_by_primary_type_bar_chart is
-  crimes -> crimes_by_primary_type
-```
-
-<!-- malloy-query
-  name="Crime Reports by Description"
-  model="crimes.malloy"
-  renderer="bar_chart"
--->
-```malloy
-query: crimes_by_description_bar_chart is
-  crimes -> crimes_by_description { limit: 20 }
-```
-
-<!-- malloy-query
-  name="Crime Reports by Primary Type and Description"
-  model="crimes.malloy"
-  renderer="table"
--->
-```malloy
-query: crimes_by_primary_type_and_description is crimes -> {
-  group_by: `Primary Type`, Description
-  aggregate: Reports
-}
-```
-
-<!-- malloy-query
-  name="Crime Reports by Location Description"
-  model="crimes.malloy"
-  renderer="bar_chart"
--->
-```malloy
-query: crimes_by_location_description_bar_chart is
-  crimes -> crimes_by_location_description { limit: 20 }
-```
-
-<!-- malloy-query
-  name="Crime Reports by Month"
-  model="crimes.malloy"
-  renderer="line_chart"
--->
-```malloy
-query: crimes_by_month_line_chart is
-  crimes -> crimes_by_month
-```
-
 <!-- malloy-query
   name="Crime Reports by Primary Type with Nested Description"
   model="crimes.malloy"
@@ -75,7 +22,7 @@ query: crimes_by_primary_type_with_description is
 ```
 
 <!-- malloy-query
-  name="Crime Reports by Primary Type with nested Description Summary"
+  name="Crime Reports by Primary Type with Nested Description Summary"
   model="crimes.malloy"
 -->
 ```malloy
@@ -137,6 +84,59 @@ query: bike_thefts is crimes -> {
   limit: 10
 }
 ```
+
+<!-- malloy-query
+  name="Crime Reports by Primary Type"
+  model="crimes.malloy"
+  renderer="bar_chart"
+-->
+```malloy
+query: crimes_by_primary_type_bar_chart is
+  crimes -> crimes_by_primary_type
+```
+
+<!-- malloy-query
+  name="Crime Reports by Description"
+  model="crimes.malloy"
+  renderer="bar_chart"
+-->
+```malloy
+query: crimes_by_description_bar_chart is
+  crimes -> crimes_by_description { limit: 20 }
+```
+
+<!-- malloy-query
+  name="Crime Reports by Primary Type and Description"
+  model="crimes.malloy"
+  renderer="table"
+-->
+```malloy
+query: crimes_by_primary_type_and_description is crimes -> {
+  group_by: `Primary Type`, Description
+  aggregate: Reports
+}
+```
+
+<!-- malloy-query
+  name="Crime Reports by Location Description"
+  model="crimes.malloy"
+  renderer="bar_chart"
+-->
+```malloy
+query: crimes_by_location_description_bar_chart is
+  crimes -> crimes_by_location_description { limit: 20 }
+```
+
+<!-- malloy-query
+  name="Crime Reports by Month"
+  model="crimes.malloy"
+  renderer="line_chart"
+-->
+```malloy
+query: crimes_by_month_line_chart is
+  crimes -> crimes_by_month
+```
+
 ## About Malloy Composer
 
 Composer is implemented using Malloy, DuckDB and WASM and runs completely
