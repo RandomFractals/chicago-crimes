@@ -27,7 +27,7 @@ query: crimes_dashboard is crimes -> {
 ```
 
 <!-- malloy-query
-  name="Crime Reports by Primary Type with Nested Description"
+  name="Crime Reports by Primary Type with Nested Description Table Summary"
   model="crimes.malloy"
 -->
 ```malloy
@@ -38,7 +38,7 @@ query: crimes_by_primary_type_with_description is
 ```
 
 <!-- malloy-query
-  name="Crime Reports by Primary Type with Nested Description Summary"
+  name="Crime Reports by Primary Type with Nested Description Chart Summary"
   model="crimes.malloy"
 -->
 ```malloy
