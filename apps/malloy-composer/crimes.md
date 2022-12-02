@@ -84,6 +84,34 @@ query: bike_thefts is crimes -> {
 ```
 
 <!-- malloy-query
+  name="Weapons Violations"
+  model="crimes.malloy"
+-->
+```malloy
+query: bike_thefts is crimes -> {
+  where: `Primary Type` ~ '%WEAPONS%'
+  group_by: `Primary Type`
+  aggregate:
+    Reports
+  nest:
+    crimes_by_month_line_chart
+    top_locations is {
+      group_by: `Location Description`
+      aggregate:
+        Reports
+        percent_of_reports is Reports/all(Reports) * 100
+      limit: 15
+    }
+    crimes_by_description is {
+      group_by: Description
+      aggregate: Reports
+      limit: 10
+    }
+  limit: 10
+}
+```
+
+<!-- malloy-query
   name="Crime Reports by Primary Type"
   model="crimes.malloy"
   renderer="bar_chart"
