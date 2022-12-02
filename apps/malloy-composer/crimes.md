@@ -170,16 +170,6 @@ query: crimes_by_location_description_bar_chart is
   crimes -> crimes_by_location_description { limit: 20 }
 ```
 
-<!-- malloy-query
-  name="Crime Reports by Month"
-  model="crimes.malloy"
-  renderer="line_chart"
--->
-```malloy
-query: crimes_by_month_line_chart is
-  crimes -> crimes_by_month
-```
-
 ## About Malloy Composer
 
 Malloy Composer is implemented using [Malloy](https://github.com/malloydata/malloy) with [DuckDB WASM](https://github.com/duckdb/duckdb-wasm) and runs completely in your browser. See [Malloy Composer](https://github.com/malloydata/malloy-composer) github repository for more information and Composer app [configuration options](https://github.com/malloydata/malloy-composer#config-file-examples).
