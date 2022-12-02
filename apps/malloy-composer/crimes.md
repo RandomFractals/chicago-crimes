@@ -52,7 +52,7 @@ query: crimes_by_type_month_and_location is crimes -> {
         percent_of_reports is Reports/all(Reports) * 100
       limit: 15
     }
-  limit: 10
+  limit: 20
 }
 ```
 
@@ -79,7 +79,7 @@ query: bike_thefts is crimes -> {
       aggregate: Reports
       limit: 10
     }
-  limit: 10
+  limit: 20
 }
 ```
 
@@ -88,7 +88,7 @@ query: bike_thefts is crimes -> {
   model="crimes.malloy"
 -->
 ```malloy
-query: bike_thefts is crimes -> {
+query: weapons_violations is crimes -> {
   where: `Primary Type` ~ '%WEAPONS%'
   group_by: `Primary Type`
   aggregate:
@@ -107,7 +107,7 @@ query: bike_thefts is crimes -> {
       aggregate: Reports
       limit: 10
     }
-  limit: 10
+  limit: 20
 }
 ```
 
