@@ -158,6 +158,15 @@ Displaying Chicago crimes 2022 `parquet` data with [Malloy Charts](https://looke
 ![Chicago Crimes Malloy Charts Summary](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-by-type-malloy-summary.png?raw=true
  "Chicago Crimes Malloy Charts Summary")
 
+### With Malloy Composer
+
+View and query 2022 Chicago crime reports data loaded from `parquet` file with [Malloy Composer](https://github.com/malloydata/malloy-composer) app in your browser:
+
+https://randomfractals.github.io/chicago-crimes/apps/malloy-composer/
+
+![Chicago Crimes Malloy Composer App](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-malloy-composer.gif?raw=true
+ "Chicago Crimes Malloy Composer App")
+
 ## Prior Works
 
 Links to our prior works on [Chicago Crimes EDA](https://twitter.com/search?q=(%23ChicagoCrimes)%20(from%3ATarasNovak)&src=typed_query) circa 2017/2018:
