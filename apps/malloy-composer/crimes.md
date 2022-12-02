@@ -50,7 +50,7 @@ query: crimes_by_primary_type_summary is
 ```
 
 <!-- malloy-query
-  name="Crime Reports by Primary Type with Monthly Counts Summary and Top Locations"
+  name="Crime Reports by Primary Type with Monthly Summary and Top Locations"
   model="crimes.malloy"
 -->
 ```malloy
@@ -73,7 +73,7 @@ query: crimes_by_type_month_and_location is crimes -> {
 ```
 
 <!-- malloy-query
-  name="Reported Bike Thefts"
+  name="Reported Bike Thefts Summary"
   model="crimes.malloy"
 -->
 ```malloy
@@ -100,7 +100,7 @@ query: bike_thefts is crimes -> {
 ```
 
 <!-- malloy-query
-  name="Weapons Violations"
+  name="Weapons Violations Summary"
   model="crimes.malloy"
 -->
 ```malloy
@@ -128,7 +128,7 @@ query: weapons_violations is crimes -> {
 ```
 
 <!-- malloy-query
-  name="Crime Reports by Primary Type"
+  name="Crime Reports by Primary Type Bar Chart"
   model="crimes.malloy"
   renderer="bar_chart"
 -->
@@ -138,7 +138,7 @@ query: crimes_by_primary_type_bar_chart is
 ```
 
 <!-- malloy-query
-  name="Crime Reports by Description"
+  name="Crime Reports by Description Bar Chart"
   model="crimes.malloy"
   renderer="bar_chart"
 -->
@@ -148,7 +148,7 @@ query: crimes_by_description_bar_chart is
 ```
 
 <!-- malloy-query
-  name="Crime Reports by Primary Type and Description"
+  name="Crime Reports by Primary Type and Description Summary"
   model="crimes.malloy"
   renderer="table"
 -->
@@ -161,7 +161,7 @@ query: crimes_by_primary_type_and_description is crimes -> {
 ```
 
 <!-- malloy-query
-  name="Crime Reports by Location Description"
+  name="Crime Reports by Location Description Bar Chart"
   model="crimes.malloy"
   renderer="bar_chart"
 -->
