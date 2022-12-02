@@ -34,6 +34,7 @@ query: crimes_by_description_bar_chart is
 <!-- malloy-query
   name="Crime Reports by Primary Type and Description"
   model="crimes.malloy"
+  renderer="table"
 -->
 ```malloy
 query: crimes_by_primary_type_and_description is crimes -> {
