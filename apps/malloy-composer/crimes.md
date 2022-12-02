@@ -42,14 +42,14 @@ query: crimes_by_type_month_and_location is crimes -> {
   group_by: `Primary Type`
   aggregate:
     Reports
-    percent_of_reports is Reports/all(Reports)
+    percent_of_reports is Reports/all(Reports) * 100
   nest:
     crimes_by_month_line_chart
     top_locations is {
       group_by: `Location Description`
       aggregate:
         Reports
-        percent_of_reports is Reports/all(Reports)
+        percent_of_reports is Reports/all(Reports) * 100
       limit: 15
     }
   limit: 10
@@ -64,16 +64,14 @@ query: crimes_by_type_month_and_location is crimes -> {
 query: bike_thefts is crimes -> {
   where: Description ~ '%BIKE%'
   group_by: `Primary Type`
-  aggregate:
-    Reports
-    percent_of_reports is Reports/all(Reports)
+  aggregate: Reports
   nest:
     crimes_by_month_line_chart
     top_locations is {
       group_by: `Location Description`
       aggregate:
         Reports
-        percent_of_reports is Reports/all(Reports)
+        percent_of_reports is Reports/all(Reports) * 100
       limit: 15
     }
     crimes_by_description is {
