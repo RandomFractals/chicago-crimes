@@ -11,6 +11,22 @@ Reported 2022 Chicago crimes data has been trimmed down and converted to [parque
 ## View Crime Reports
 
 <!-- malloy-query
+  name="Crime Reports Dashboard"
+  model="crimes.malloy"
+  renderer="dashboard"
+-->
+```malloy
+query: crimes_dashboard is crimes -> {
+  aggregate: Reports
+  nest:
+    Domestic_Reports
+    Arrests
+    crimes_by_month_line_chart
+    crimes_by_primary_type
+}
+```
+
+<!-- malloy-query
   name="Crime Reports by Primary Type with Nested Description"
   model="crimes.malloy"
 -->
