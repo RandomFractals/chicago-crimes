@@ -156,6 +156,7 @@ query: crimes_by_description_bar_chart is
 query: crimes_by_primary_type_and_description is crimes -> {
   group_by: `Primary Type`, Description
   aggregate: Reports
+  limit: 100
 }
 ```
 
