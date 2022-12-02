@@ -91,21 +91,21 @@ query: crimes_by_primary_type_summary is
 -->
 ```malloy
 query: crimes_by_type_month_and_location is crimes -> {
-    group_by: `Primary Type`
-    aggregate:
-      Reports
-      percent_of_reports is Reports/all(Reports)
-    nest:
-      crimes_by_month
-      top_locations is {
-        group_by: `Location Description`
-        aggregate:
-          Reports
-          percent_of_reports is Reports/all(Reports)
-        limit: 15
-      }
-    limit: 10
-  }
+  group_by: `Primary Type`
+  aggregate:
+    Reports
+    percent_of_reports is Reports/all(Reports)
+  nest:
+    crimes_by_month_line_chart
+    top_locations is {
+      group_by: `Location Description`
+      aggregate:
+        Reports
+        percent_of_reports is Reports/all(Reports)
+      limit: 15
+    }
+  limit: 10
+}
 ```
 
 <!-- malloy-query
@@ -114,27 +114,27 @@ query: crimes_by_type_month_and_location is crimes -> {
 -->
 ```malloy
 query: bike_thefts is crimes -> {
-    where: Description ~ '%BIKE%'
-    group_by: `Primary Type`
-    aggregate:
-      Reports
-      percent_of_reports is Reports/all(Reports)
-    nest:
-      crimes_by_month
-      top_locations is {
-        group_by: `Location Description`
-        aggregate:
-          Reports
-          percent_of_reports is Reports/all(Reports)
-        limit: 15
-      }
-      crimes_by_description is {
-        group_by: Description
-        aggregate: Reports
-        limit: 10
-      }
-    limit: 10
-  }
+  where: Description ~ '%BIKE%'
+  group_by: `Primary Type`
+  aggregate:
+    Reports
+    percent_of_reports is Reports/all(Reports)
+  nest:
+    crimes_by_month_line_chart
+    top_locations is {
+      group_by: `Location Description`
+      aggregate:
+        Reports
+        percent_of_reports is Reports/all(Reports)
+      limit: 15
+    }
+    crimes_by_description is {
+      group_by: Description
+      aggregate: Reports
+      limit: 10
+    }
+  limit: 10
+}
 ```
 ## About Malloy Composer
 
