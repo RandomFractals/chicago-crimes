@@ -3,7 +3,7 @@
     "Datagrid": {
       "plugin": "Datagrid",
       "plugin_config": {},
-      "settings": false,
+      "settings": true,
       "row_pivots": [],
       "column_pivots": [],
       "columns": [
@@ -31,7 +31,12 @@
         "Location"
       ],
       "filter": [],
-      "sort": [],
+      "sort": [
+        [
+          "Date",
+          "desc"
+        ]
+      ],
       "expressions": [],
       "aggregates": {}
     }

@@ -36,33 +36,8 @@
       "format": "default"
     },
     {
-      "name": "Beat",
-      "type": "any",
-      "format": "default"
-    },
-    {
-      "name": "District",
-      "type": "integer",
-      "format": "default"
-    },
-    {
-      "name": "Ward",
-      "type": "integer",
-      "format": "default"
-    },
-    {
       "name": "Community Area",
       "type": "integer",
-      "format": "default"
-    },
-    {
-      "name": "Latitude",
-      "type": "number",
-      "format": "default"
-    },
-    {
-      "name": "Longitude",
-      "type": "number",
       "format": "default"
     }
   ],

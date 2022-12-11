@@ -3,7 +3,7 @@
     "Datagrid": {
       "plugin": "Datagrid",
       "plugin_config": {},
-      "settings": false,
+      "settings": true,
       "row_pivots": [],
       "column_pivots": [],
       "columns": [
@@ -14,15 +14,15 @@
         "Location Description",
         "Arrest",
         "Domestic",
-        "Beat",
-        "District",
-        "Ward",
-        "Community Area",
-        "Latitude",
-        "Longitude"
+        "Community Area"
       ],
       "filter": [],
-      "sort": [],
+      "sort": [
+        [
+          "Date",
+          "desc"
+        ]
+      ],
       "expressions": [],
       "aggregates": {}
     }
