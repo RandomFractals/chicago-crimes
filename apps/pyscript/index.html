@@ -18,8 +18,11 @@ packages = [
 import altair as alt
 import pandas as pd
 
+from io import BytesIO
 from pyodide.http import open_url
 from datetime import datetime
+
+from js import fetch
 from js import console
 from js import document
 
@@ -27,12 +30,14 @@ info_element = document.getElementById('info')
 info_element.innerText = 'Loading Data ...'
 start_time = datetime.now()
 
-# read slimmed down 2022 crimes CSV data
-data_url = (
-  'https://raw.githubusercontent.com/RandomFractals/chicago-crimes/main/data'
-)
-crimes_data_url = f'{data_url}/crimes-2022-slim.csv'
-crimes = pd.read_csv(open_url(crimes_data_url),
+# read slimmed down 2022 crimes CSV data in gzip format
+data_url = 'https://raw.githubusercontent.com/RandomFractals/chicago-crimes/main/data'
+crimes_data_url = f'{data_url}/crimes-2022-slim.csv.gz'
+data_response = await fetch(crimes_data_url)
+crimes_data = await data_response.arrayBuffer()
+crimes = pd.read_csv(BytesIO(crimes_data.to_py()),
+  sep=',',
+  compression='gzip',
   parse_dates=['Date'],
   cache_dates=True,
   low_memory=False)
