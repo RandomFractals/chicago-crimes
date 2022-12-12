@@ -1,40 +1,36 @@
 import "./crime-reports.malloy"
 
 // --
-// Name: Crime Reports Dashboard
-query: crimes_dashboard is crimes -> {
+// Name: Crime Reports Summary
+query: crimes -> {
   aggregate: Reports
   nest:
-    Domestic_Reports
-    Arrests
-    crimes_by_month_line_chart
-    crimes_by_primary_type
+    reports_by_month_line_chart
+    reports_by_primary_type
 }
 
 // --
 // Name: Crime Reports by Primary Type with Nested Description Table Summary
-query: crimes_by_primary_type_with_description is
-  crimes -> crimes_by_primary_type + {
-    nest: crimes_by_description
+query: crimes -> reports_by_primary_type + {
+    nest: reports_by_description
   }
 
 // --
 // Name: Crime Reports by Primary Type with Nested Description Chart Summary
-query: crimes_by_primary_type_summary is
-  crimes -> crimes_by_primary_type + {
-    nest: crimes_by_description_bar_chart is
-      crimes_by_description { limit: 10 }
+query: crimes -> reports_by_primary_type + {
+    nest: reports_by_description_bar_chart is
+      reports_by_description { limit: 10 }
     }
 
 // --
 // Name: Crime Reports by Primary Type with Monthly Summary and Top Locations
-query: crimes_by_type_month_and_location is crimes -> {
+query: crimes -> {
   group_by: `Primary Type`
   aggregate:
     Reports
     percent_of_reports is Reports/all(Reports) * 100
   nest:
-    crimes_by_month_line_chart
+    reports_by_month_line_chart
     top_locations is {
       group_by: `Location Description`
       aggregate:
@@ -47,12 +43,12 @@ query: crimes_by_type_month_and_location is crimes -> {
 
 // --
 // Name: Reported Bike Thefts Summary
-query: bike_thefts is crimes -> {
+query: crimes -> {
   where: Description ~ '%BIKE%'
   group_by: `Primary Type`
   aggregate: Reports
   nest:
-    crimes_by_month_line_chart
+    reports_by_month_line_chart
     top_locations is {
       group_by: `Location Description`
       aggregate:
@@ -70,13 +66,13 @@ query: bike_thefts is crimes -> {
 
 // --
 // Name: Weapons Violations Summary
-query: weapons_violations is crimes -> {
+query: crimes -> {
   where: `Primary Type` ~ '%WEAPONS%'
   group_by: `Primary Type`
   aggregate:
     Reports
   nest:
-    crimes_by_month_line_chart
+    reports_by_month_line_chart
     top_locations is {
       group_by: `Location Description`
       aggregate:
@@ -93,18 +89,12 @@ query: weapons_violations is crimes -> {
 }
 
 // --
-// Name: Crime Reports by Primary Type Bar Chart
-query: crimes_by_primary_type_bar_chart is
-  crimes -> crimes_by_primary_type
-
-// --
-// Name: Crime Reports by Description Bar Chart
-query: crimes_by_description_bar_chart is
-  crimes -> crimes_by_description { limit: 20 }
+// Name: Crime Reports by Description
+query: crimes -> reports_by_description { limit: 20 }
 
 // --
 // Name: Crime Reports by Primary Type and Description Summary
-query: crimes_by_primary_type_and_description is crimes -> {
+query: crimes -> {
   group_by: `Primary Type`, Description
   aggregate: Reports
   limit: 100
@@ -112,5 +102,4 @@ query: crimes_by_primary_type_and_description is crimes -> {
 
 // --
 // Name: Crime Reports by Location Description Bar Chart
-query: crimes_by_location_description_bar_chart is
-  crimes -> crimes_by_location_description { limit: 20 }
+query: crimes -> reports_by_location_description { limit: 20 }
