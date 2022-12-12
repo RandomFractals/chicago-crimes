@@ -1,7 +1,7 @@
 [
   {
     "name": "Chicago Crime Reports 2022",
-    "dataTables": ["crimes_2022_slim.parquet"],
+    "dataTables": ["crime_reports_2022_slim.parquet"],
     "modelPath": "./crime-reports.malloy",
     "queryPath": "./crime-report-queries.malloy"
   }

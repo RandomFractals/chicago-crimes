@@ -1,4 +1,4 @@
-source: crimes is table('duckdb:crimes_2022_slim.parquet') {
+source: crimes is table('duckdb:crime_reports_2022_slim.parquet') {
     measure: Reports is count()
     measure: Arrests is Reports {
       where: Arrest = true
