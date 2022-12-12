@@ -12,15 +12,15 @@ query: crimes -> {
 // --
 // Name: Crime Reports by Primary Type with Nested Description Table Summary
 query: crimes -> reports_by_primary_type + {
-    nest: reports_by_description
-  }
+  nest: reports_by_description
+}
 
 // --
 // Name: Crime Reports by Primary Type with Nested Description Chart Summary
 query: crimes -> reports_by_primary_type + {
-    nest: reports_by_description_bar_chart is
-      reports_by_description { limit: 10 }
-    }
+  nest: reports_by_description_bar_chart is
+    reports_by_description { limit: 10 }
+}
 
 // --
 // Name: Crime Reports by Primary Type with Monthly Summary and Top Locations
