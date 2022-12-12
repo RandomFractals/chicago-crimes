@@ -101,5 +101,5 @@ query: crimes -> {
 }
 
 // --
-// Name: Crime Reports by Location Description Bar Chart
+// Name: Crime Reports by Location Description Summary
 query: crimes -> reports_by_location_description { limit: 20 }
