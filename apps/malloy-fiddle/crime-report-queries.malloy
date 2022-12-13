@@ -36,7 +36,7 @@ query: crimes -> {
       aggregate:
         Reports
         percent_of_reports is Reports/all(Reports) * 100
-      limit: 15
+      limit: 10
     }
   limit: 20
 }
