@@ -1,26 +1,26 @@
 source: crimes is table('duckdb:crime_reports_2022_slim.parquet') {
-    measure: Reports is count()
-    measure: Arrests is Reports {
-      where: Arrest = true
-    }
-    measure: Domestic_Reports is Reports {
-      where: Domestic = true
-    }
-    query: reports_by_primary_type is {
-      group_by: `Primary Type`
-      aggregate: Reports
-    }
-    query: reports_by_description is {
-      group_by: Description,
-      aggregate: Reports
-    }
-    query: reports_by_location_description is {
-      group_by: `Location Description`
-      aggregate: Reports
-    }
-    query: reports_by_month is {
-      group_by: `Month` is `Date`.month
-      aggregate: Reports
-    }
-    query: reports_by_month_line_chart is reports_by_month
+  measure: Reports is count()
+  measure: Arrests is Reports {
+    where: Arrest = true
   }
+  measure: Domestic_Reports is Reports {
+    where: Domestic = true
+  }
+  query: reports_by_primary_type is {
+    group_by: `Primary Type`
+    aggregate: Reports
+  }
+  query: reports_by_description is {
+    group_by: Description,
+    aggregate: Reports
+  }
+  query: reports_by_location_description is {
+    group_by: `Location Description`
+    aggregate: Reports
+  }
+  query: reports_by_month is {
+    group_by: `Month` is `Date`.month
+    aggregate: Reports
+  }
+  query: reports_by_month_line_chart is reports_by_month
+}
