@@ -167,6 +167,15 @@ https://randomfractals.github.io/chicago-crimes/apps/malloy-composer/
 ![Chicago Crimes Malloy Composer App](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crimes-malloy-composer.gif?raw=true
  "Chicago Crimes Malloy Composer App")
 
+### With Malloy Fiddle
+
+View 2022 Chicago crime reports data, schema, [Malloy](https://malloydata.github.io/malloy/documentation/language/source.html) model, and queries with [Malloy Fiddle](https://github.com/malloydata/malloy-demo-fiddle) app in your browser:
+
+https://randomfractals.github.io/chicago-crimes/apps/malloy-fiddle
+
+![Chicago Crime Reports Malloy Fiddle App](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crime-reports-malloy-fiddle-app.gif?raw=true
+ "Chicago Crime Reports Malloy Fiddle App")
+
 ## Prior Works
 
 Links to our prior works on [Chicago Crimes EDA](https://twitter.com/search?q=(%23ChicagoCrimes)%20(from%3ATarasNovak)&src=typed_query) circa 2017/2018:
