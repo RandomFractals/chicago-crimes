@@ -183,6 +183,16 @@ Loading and querying 7,687,725 Chicago crime reports recorded from 2001 through 
 ![Chicago Crime Reports with DuckDB Sql Tools](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/create-chicago-crime-reports-duckdb-table.gif?raw=true
  "Create and Query Chicago Crime Reports DuckDB Table")
 
+Exporting in-memory DuckDB instance with DuckDB Sql Tools:
+
+![Chicago Crime Reports DuckDB Database Export](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/export-chicago-crime-reports-duckdb.gif?raw=true
+ "Chicago Crime Reports DuckDB Database Export")
+
+Exporting DuckDB instance in Parquet data format and importing it into new test DuckDB memory instance:
+
+![Chicago Crime Reports DuckDB Database Export](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crime-reports-parquet-data-export-import.gif?raw=true
+ "Chicago Crime Reports DuckDB Parquet Data Export/Import")
+
 ## Prior Works
 
 Links to our prior works on [Chicago Crimes EDA](https://twitter.com/search?q=(%23ChicagoCrimes)%20(from%3ATarasNovak)&src=typed_query) circa 2017/2018:
