@@ -6,6 +6,12 @@
       "name": "ChicagoCrimeReports.duckdb",
       "group": "DuckDB",
       "database": ":memory:"
+    },
+    {
+      "previewLimit": 1000,
+      "driver": "DuckDB",
+      "name": "test.duckdb",
+      "database": ":memory:"
     }
   ]
 }
