@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 10000,
+      "driver": "DuckDB",
+      "name": "ChicagoCrimeReports.duckdb",
+      "group": "DuckDB",
+      "database": ":memory:"
+    }
+  ]
+}
