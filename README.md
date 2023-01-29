@@ -176,6 +176,13 @@ https://randomfractals.github.io/chicago-crimes/apps/malloy-fiddle
 ![Chicago Crime Reports Malloy Fiddle App](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/chicago-crime-reports-malloy-fiddle-app.gif?raw=true
  "Chicago Crime Reports Malloy Fiddle App")
 
+### With DuckDB Sql Tools
+
+Loading and querying 7,687,725 Chicago crime reports recorded from 2001 through the end of November 2022 from a large 1.68 GB CSV data file with new VSCode [DuckDB Sql Tools](https://marketplace.visualstudio.com/items?itemName=RandomFractalsInc.duckdb-sql-tools) extension:
+
+![Chicago Crime Reports with DuckDB Sql Tools](https://github.com/RandomFractals/chicago-crimes/blob/main/docs/images/create-chicago-crime-reports-duckdb-table.gif?raw=true
+ "Create and Query Chicago Crime Reports DuckDB Table")
+
 ## Prior Works
 
 Links to our prior works on [Chicago Crimes EDA](https://twitter.com/search?q=(%23ChicagoCrimes)%20(from%3ATarasNovak)&src=typed_query) circa 2017/2018:
