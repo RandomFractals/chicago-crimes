@@ -4,7 +4,6 @@
       "previewLimit": 10000,
       "driver": "DuckDB",
       "name": "ChicagoCrimeReports.duckdb",
-      "group": "DuckDB",
       "database": ":memory:"
     },
     {
@@ -12,6 +11,6 @@
       "driver": "DuckDB",
       "name": "test.duckdb",
       "database": ":memory:"
-    }
+    },
   ]
 }
